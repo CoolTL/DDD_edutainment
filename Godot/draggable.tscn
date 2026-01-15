@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://desploocsv0ov"]
+
+[ext_resource type="Texture2D" uid="uid://ddrbpy0qn8gbo" path="res://temp_background.jpg" id="1_u6fe1"]
+[ext_resource type="PackedScene" uid="uid://bls5gqavwlnd8" path="res://scene_item.tscn" id="2_u6fe1"]
+[ext_resource type="PackedScene" uid="uid://nvlm51erhndn" path="res://frame.tscn" id="4_dtr5r"]
+[ext_resource type="PackedScene" uid="uid://b0rxsp116faye" path="res://scenes/char_spot.tscn" id="4_iufs2"]
+
+[node name="Node" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+light_mask = 0
+visibility_layer = 4
+offset_right = 1280.0
+offset_bottom = 717.0
+texture = ExtResource("1_u6fe1")
+
+[node name="Frame" parent="." instance=ExtResource("4_dtr5r")]
+position = Vector2(92, 129)
+
+[node name="Frame2" parent="." instance=ExtResource("4_dtr5r")]
+position = Vector2(464, 127)
+
+[node name="char_spot" parent="." instance=ExtResource("4_iufs2")]
+position = Vector2(234, 468)
+
+[node name="SceneItem" parent="." instance=ExtResource("2_u6fe1")]
+position = Vector2(329, 637)
+
+[node name="SceneItem2" parent="." instance=ExtResource("2_u6fe1")]
+position = Vector2(485, 637)
+back_index = 1
+
+[node name="SceneItem3" parent="." instance=ExtResource("2_u6fe1")]
+position = Vector2(786, 637)
+
+[node name="Area2D" parent="SceneItem3" index="1"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="SceneItem4" parent="." instance=ExtResource("2_u6fe1")]
+position = Vector2(935, 637)
+char_index = 1
+
+[node name="Area2D" parent="SceneItem4" index="1"]
+collision_layer = 2
+collision_mask = 2
+
+[editable path="SceneItem3"]
+[editable path="SceneItem4"]
