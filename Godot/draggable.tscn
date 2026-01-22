@@ -9,40 +9,40 @@
 [node name="TextureRect" type="TextureRect" parent="."]
 light_mask = 0
 visibility_layer = 4
-offset_right = 1280.0
-offset_bottom = 717.0
+offset_right = 639.0
+offset_bottom = 359.0
 texture = ExtResource("1_u6fe1")
 
 [node name="Frame" parent="." instance=ExtResource("4_dtr5r")]
-position = Vector2(20, 24)
+position = Vector2(57, 61)
 
 [node name="Frame2" parent="." instance=ExtResource("4_dtr5r")]
-position = Vector2(433, 22)
+position = Vector2(240, 64)
+
+[node name="Frame3" parent="." instance=ExtResource("4_dtr5r")]
+position = Vector2(399, 73)
 
 [node name="SceneItem" parent="." instance=ExtResource("2_u6fe1")]
-position = Vector2(329, 637)
+position = Vector2(167, 316)
 
 [node name="SceneItem2" parent="." instance=ExtResource("2_u6fe1")]
-position = Vector2(485, 637)
+position = Vector2(241, 317)
 back_index = 1
 
 [node name="SceneItem3" parent="." instance=ExtResource("2_u6fe1")]
-position = Vector2(786, 637)
+position = Vector2(478, 313)
 
 [node name="Area2D" parent="SceneItem3" index="1"]
 collision_layer = 2
 collision_mask = 2
 
 [node name="SceneItem4" parent="." instance=ExtResource("2_u6fe1")]
-position = Vector2(935, 637)
+position = Vector2(573, 316)
 char_index = 1
 
 [node name="Area2D" parent="SceneItem4" index="1"]
 collision_layer = 2
 collision_mask = 2
-
-[node name="Frame3" parent="." instance=ExtResource("4_dtr5r")]
-position = Vector2(840, 26)
 
 [editable path="SceneItem3"]
 [editable path="SceneItem4"]

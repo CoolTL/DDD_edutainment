@@ -4,20 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://c3wb2sius81q2" path="res://scenes/backgrounds/texture_template.tscn" id="2_bs1d3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_law6f"]
-size = Vector2(399.5, 249.5)
+size = Vector2(116.5, 66.5)
 
 [node name="Frame" type="Area2D"]
 script = ExtResource("1_m7nv7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(199.25, 124.25)
+position = Vector2(57.75, 32.75)
 shape = SubResource("RectangleShape2D_law6f")
 
 [node name="TextureRect" parent="." instance=ExtResource("2_bs1d3")]
 visible = false
-offset_left = -1.0
-offset_top = -2.0
-offset_right = 399.0
-offset_bottom = 248.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 114.0
+offset_bottom = 64.0
 
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

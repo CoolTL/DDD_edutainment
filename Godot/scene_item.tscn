@@ -7,6 +7,7 @@
 size = Vector2(133, 129)
 
 [node name="SceneItem" type="Sprite2D"]
+scale = Vector2(0.39453125, 0.39453125)
 texture = ExtResource("1_w8pap")
 script = ExtResource("2_4jft0")
 metadata/_edit_group_ = true

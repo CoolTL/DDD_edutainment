@@ -8,14 +8,15 @@
 gradient = SubResource("Gradient_u6fe1")
 
 [node name="TextureRect" type="TextureRect"]
-offset_left = -11.0
-offset_top = -11.0
-offset_right = 355.0
-offset_bottom = 208.0
+offset_left = 30.0
+offset_top = 28.0
+offset_right = 144.0
+offset_bottom = 92.0
 texture = SubResource("GradientTexture1D_dtr5r")
+expand_mode = 1
 
 [node name="char_spot" parent="." instance=ExtResource("1_vkn81")]
-position = Vector2(60, 149)
+position = Vector2(19, 40)
 
 [node name="char_spot2" parent="." instance=ExtResource("1_vkn81")]
-position = Vector2(277, 150)
+position = Vector2(95, 41)
