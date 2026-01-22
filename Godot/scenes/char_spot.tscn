@@ -41,3 +41,5 @@ offset_right = 31.0
 offset_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

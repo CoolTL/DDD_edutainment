@@ -6,6 +6,8 @@ var start_pos = 0
 @export var back_index = 0
 @export var char_index = 0
 
+func _ready():
+	print(name, " layer=", $Area2D.collision_layer, " mask=", $Area2D.collision_mask)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
