@@ -1,5 +1,6 @@
 extends Area2D
 
+signal changed
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,6 +17,7 @@ func hide_background():
 
 func _on_area_exited(area: Area2D) -> void:
 	if area.get_parent().dragging == false:
+		changed.emit()
 		if area.get_parent().char_index == 0:
 			hide_background()
 			$ColorRect.show()
