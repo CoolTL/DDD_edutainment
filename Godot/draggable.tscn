@@ -9,35 +9,35 @@
 [node name="TextureRect" type="TextureRect" parent="."]
 light_mask = 0
 visibility_layer = 4
-offset_right = 639.0
-offset_bottom = 359.0
+offset_right = 480.0
+offset_bottom = 267.0
 texture = ExtResource("1_u6fe1")
 
 [node name="Frame" parent="." instance=ExtResource("4_dtr5r")]
-position = Vector2(57, 61)
+position = Vector2(43, 50)
 
 [node name="Frame2" parent="." instance=ExtResource("4_dtr5r")]
-position = Vector2(240, 64)
+position = Vector2(183, 50)
 
 [node name="Frame3" parent="." instance=ExtResource("4_dtr5r")]
-position = Vector2(399, 73)
+position = Vector2(322, 50)
 
 [node name="SceneItem" parent="." instance=ExtResource("2_u6fe1")]
-position = Vector2(167, 316)
+position = Vector2(75, 215)
 
 [node name="SceneItem2" parent="." instance=ExtResource("2_u6fe1")]
-position = Vector2(241, 317)
+position = Vector2(145, 220.99997)
 back_index = 1
 
 [node name="SceneItem3" parent="." instance=ExtResource("2_u6fe1")]
-position = Vector2(478, 313)
+position = Vector2(301, 221)
 
 [node name="Area2D" parent="SceneItem3" index="1"]
 collision_layer = 2
 collision_mask = 2
 
 [node name="SceneItem4" parent="." instance=ExtResource("2_u6fe1")]
-position = Vector2(573, 316)
+position = Vector2(385, 220)
 char_index = 1
 
 [node name="Area2D" parent="SceneItem4" index="1"]
