@@ -1,7 +1,9 @@
 extends Area2D
 
 # This signal makes the level check if everything is correct
+# NOTE Currently unused because of check button
 signal changed
+var solved = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,10 +19,13 @@ func hide_background():
 
 func _on_area_exited(area: Area2D) -> void:
 	if area.get_parent().dragging == false:
-		changed.emit()
 		if area.get_parent().back_index == 0:
 			hide_background()
 			$TextureRect.show()
 		elif area.get_parent().back_index == 1:
 			hide_background()
-			#print("works")
+		changed.emit()
+
+
+func _on_texture_rect_correct() -> void:
+	solved = true

@@ -46,5 +46,14 @@ char_index = 1
 collision_layer = 2
 collision_mask = 2
 
+[node name="CheckButton" type="Button" parent="."]
+offset_left = 184.0
+offset_top = 209.0
+offset_right = 271.0
+offset_bottom = 251.0
+text = "Check"
+
+[connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
+
 [editable path="SceneItem3"]
 [editable path="SceneItem4"]

@@ -7,7 +7,7 @@ func _ready() -> void:
 	for spot in spots:
 		spot.connect("changed", check)
 
+# This function is where we define the correct configuration of the frame
 func check():
 	if $char_spot/ColorRect.visible:
-		print("gex")
 		correct.emit()
