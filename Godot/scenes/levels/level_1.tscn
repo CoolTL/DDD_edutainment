@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://desploocsv0ov"]
+[gd_scene load_steps=6 format=3 uid="uid://desploocsv0ov"]
 
 [ext_resource type="Texture2D" uid="uid://ddrbpy0qn8gbo" path="res://assets/temp_background.jpg" id="1_nsrm0"]
 [ext_resource type="Script" uid="uid://bws71e0ixuj0w" path="res://scenes/levels/level_1.gd" id="1_x42e6"]
 [ext_resource type="PackedScene" uid="uid://nvlm51erhndn" path="res://scenes/frame.tscn" id="2_x42e6"]
 [ext_resource type="PackedScene" uid="uid://bls5gqavwlnd8" path="res://scenes/scene_item.tscn" id="3_6761a"]
+[ext_resource type="PackedScene" uid="uid://bop04jj0xm507" path="res://scenes/heart.tscn" id="5_6761a"]
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_x42e6")
@@ -16,13 +17,13 @@ offset_bottom = 225.0
 texture = ExtResource("1_nsrm0")
 
 [node name="Frame" parent="." instance=ExtResource("2_x42e6")]
-position = Vector2(26, 38)
+position = Vector2(26, 39)
 
 [node name="Frame2" parent="." instance=ExtResource("2_x42e6")]
-position = Vector2(144, 41)
+position = Vector2(144, 39)
 
 [node name="Frame3" parent="." instance=ExtResource("2_x42e6")]
-position = Vector2(260, 41)
+position = Vector2(262, 39)
 
 [node name="SceneItem" parent="." instance=ExtResource("3_6761a")]
 position = Vector2(59, 194)
@@ -52,6 +53,9 @@ offset_top = 184.0
 offset_right = 221.0
 offset_bottom = 215.0
 text = "Check"
+
+[node name="Heart" parent="." instance=ExtResource("5_6761a")]
+position = Vector2(28, 19)
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 

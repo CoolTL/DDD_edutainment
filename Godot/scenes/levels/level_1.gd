@@ -5,8 +5,20 @@ extends Node
 @export var frame_2_solved = false
 @export var frame_3_solved = false
 
+var heart = preload("res://scenes/heart.tscn")
+
+@onready var hearts = [$Heart]
+
 func _ready() -> void:
 	$Frame.enable_monitoring()
+	var counter = 0
+	for life in lives-1:
+		life = heart.instantiate()
+		add_child(life)
+		life.position = $Heart.position
+		life.position.x += (counter + 1) * 34
+		hearts.append(life)
+		counter += 1
 	# For testing purposes we check if we pre-set any frames to solved
 	# NOTE Doesn't work yet
 	#checker()
@@ -39,8 +51,11 @@ func checker() -> void:
 func life_lost() -> void:
 	print("Life lost")
 	lives -= 1
-	if lives <= 0:
+	if lives < 0:
 		print("Game over")
+	else:
+		hearts[-1].queue_free()
+		hearts.remove_at(-1)
 
 
 func _on_check_button_pressed() -> void:
