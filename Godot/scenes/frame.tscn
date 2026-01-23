@@ -7,6 +7,7 @@
 size = Vector2(116.5, 66.5)
 
 [node name="Frame" type="Area2D" groups=["frames"]]
+monitoring = false
 script = ExtResource("1_m7nv7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -18,3 +19,4 @@ visible = false
 
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="correct" from="TextureRect" to="." method="_on_texture_rect_correct"]
+[connection signal="not_correct" from="TextureRect" to="." method="_on_texture_rect_not_correct"]

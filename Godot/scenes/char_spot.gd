@@ -12,15 +12,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func hide_background():
+func clear_spot():
 	$ColorRect.hide()
 	$ColorRect2.hide()
 
 func _on_area_exited(area: Area2D) -> void:
 	if area.get_parent().dragging == false:
 		if area.get_parent().char_index == 0:
-			hide_background()
+			clear_spot()
 			$ColorRect.show()
 		elif area.get_parent().char_index == 1:
-			hide_background()
+			clear_spot()
 		changed.emit()
