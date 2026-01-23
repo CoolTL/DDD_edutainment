@@ -1,17 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dxmmd1iy1k1n"]
+[gd_scene load_steps=4 format=3 uid="uid://dxmmd1iy1k1n"]
 
 [ext_resource type="Script" uid="uid://dboo2lpea25tg" path="res://scenes/levels/level_1_frames/frame_1.gd" id="1_55sxj"]
 [ext_resource type="PackedScene" uid="uid://b0rxsp116faye" path="res://scenes/char_spot.tscn" id="1_bf26a"]
-
-[sub_resource type="Gradient" id="Gradient_u6fe1"]
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_dtr5r"]
-gradient = SubResource("Gradient_u6fe1")
+[ext_resource type="Texture2D" uid="uid://kep8jdfwwm1n" path="res://assets/four_guys.png" id="1_prcck"]
 
 [node name="TextureRect" type="TextureRect"]
 offset_right = 114.0
 offset_bottom = 64.0
-texture = SubResource("GradientTexture1D_dtr5r")
+texture = ExtResource("1_prcck")
 expand_mode = 1
 script = ExtResource("1_55sxj")
 

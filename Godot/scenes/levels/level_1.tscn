@@ -11,35 +11,35 @@ script = ExtResource("1_x42e6")
 [node name="TextureRect" type="TextureRect" parent="."]
 light_mask = 0
 visibility_layer = 4
-offset_right = 480.0
-offset_bottom = 267.0
+offset_right = 400.0
+offset_bottom = 225.0
 texture = ExtResource("1_nsrm0")
 
 [node name="Frame" parent="." instance=ExtResource("2_x42e6")]
-position = Vector2(43, 50)
+position = Vector2(26, 38)
 
 [node name="Frame2" parent="." instance=ExtResource("2_x42e6")]
-position = Vector2(183, 50)
+position = Vector2(144, 41)
 
 [node name="Frame3" parent="." instance=ExtResource("2_x42e6")]
-position = Vector2(322, 50)
+position = Vector2(260, 41)
 
 [node name="SceneItem" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(75, 215)
+position = Vector2(59, 194)
 
 [node name="SceneItem2" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(145, 220.99997)
+position = Vector2(116, 195)
 back_index = 1
 
 [node name="SceneItem3" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(301, 221)
+position = Vector2(274, 194.99998)
 
 [node name="Area2D" parent="SceneItem3" index="1"]
 collision_layer = 2
 collision_mask = 2
 
 [node name="SceneItem4" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(385, 220)
+position = Vector2(337, 194)
 char_index = 1
 
 [node name="Area2D" parent="SceneItem4" index="1"]
@@ -47,10 +47,10 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CheckButton" type="Button" parent="."]
-offset_left = 184.0
-offset_top = 209.0
-offset_right = 271.0
-offset_bottom = 251.0
+offset_left = 161.0
+offset_top = 184.0
+offset_right = 221.0
+offset_bottom = 215.0
 text = "Check"
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
