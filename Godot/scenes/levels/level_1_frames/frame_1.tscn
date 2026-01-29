@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dboo2lpea25tg" path="res://scenes/levels/level_1_frames/frame_1.gd" id="1_55sxj"]
 [ext_resource type="PackedScene" uid="uid://b0rxsp116faye" path="res://scenes/char_spot.tscn" id="1_bf26a"]
-[ext_resource type="Texture2D" uid="uid://kep8jdfwwm1n" path="res://assets/four_guys.png" id="1_prcck"]
+[ext_resource type="Texture2D" uid="uid://cspdn4ry6pegi" path="res://assets/five_guys.png" id="1_prcck"]
 
 [node name="TextureRect" type="TextureRect"]
 offset_right = 114.0

@@ -51,7 +51,7 @@ func checker() -> void:
 func life_lost() -> void:
 	print("Life lost")
 	lives -= 1
-	if lives < 0:
+	if lives <= 0:
 		print("Game over")
 	else:
 		hearts[-1].queue_free()

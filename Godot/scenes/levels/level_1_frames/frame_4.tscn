@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bo1adi2bgn5hq"]
+
+[ext_resource type="Texture2D" uid="uid://kep8jdfwwm1n" path="res://assets/four_guys.png" id="1_634uy"]
+[ext_resource type="Script" uid="uid://dboo2lpea25tg" path="res://scenes/levels/level_1_frames/frame_1.gd" id="2_brfnk"]
+[ext_resource type="PackedScene" uid="uid://b0rxsp116faye" path="res://scenes/char_spot.tscn" id="3_quie6"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 114.0
+offset_bottom = 64.0
+texture = ExtResource("1_634uy")
+expand_mode = 1
+script = ExtResource("2_brfnk")
+
+[node name="char_spot" parent="." instance=ExtResource("3_quie6")]
+position = Vector2(19, 40)
+
+[node name="char_spot2" parent="." instance=ExtResource("3_quie6")]
+position = Vector2(95, 41)
