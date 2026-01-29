@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dobu7y37dyay1"]
+
+[ext_resource type="Script" uid="uid://be28tfvxhcpt2" path="res://scenes/char_spot_4.gd" id="1_hs86e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhxem"]
+size = Vector2(33.1875, 16.25)
+
+[node name="char_spot" type="Area2D" groups=["spots"]]
+collision_layer = 2
+collision_mask = 2
+monitoring = false
+script = ExtResource("1_hs86e")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hhxem")
+
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
