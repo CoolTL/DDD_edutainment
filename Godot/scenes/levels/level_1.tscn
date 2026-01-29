@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://desploocsv0ov"]
+[gd_scene load_steps=8 format=3 uid="uid://desploocsv0ov"]
 
 [ext_resource type="Script" uid="uid://bws71e0ixuj0w" path="res://scenes/levels/level_1.gd" id="1_x42e6"]
 [ext_resource type="Texture2D" uid="uid://yogmbemltanl" path="res://assets/level1_baggrund.png" id="2_sk5k4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bls5gqavwlnd8" path="res://scenes/scene_item.tscn" id="3_6761a"]
 [ext_resource type="PackedScene" uid="uid://bop04jj0xm507" path="res://scenes/heart.tscn" id="5_6761a"]
 [ext_resource type="PackedScene" uid="uid://47hv7jhexrxc" path="res://scenes/levels/level_1_frames/frame_2.tscn" id="6_sk5k4"]
+[ext_resource type="Texture2D" uid="uid://155n6lsnq26k" path="res://assets/question_mark.png" id="7_oc4kc"]
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_x42e6")
@@ -57,7 +58,47 @@ focus_mode = 0
 flat = true
 
 [node name="Heart" parent="." instance=ExtResource("5_6761a")]
-position = Vector2(28, 19)
+position = Vector2(302, 19)
+
+[node name="Question1" type="TextureRect" parent="."]
+offset_left = 143.0
+offset_top = 38.0
+offset_right = 257.0
+offset_bottom = 104.0
+texture = ExtResource("7_oc4kc")
+stretch_mode = 3
+
+[node name="Question2" type="TextureRect" parent="."]
+offset_left = 261.0
+offset_top = 36.0
+offset_right = 375.0
+offset_bottom = 102.0
+texture = ExtResource("7_oc4kc")
+stretch_mode = 3
+
+[node name="Question3" type="TextureRect" parent="."]
+offset_left = 25.0
+offset_top = 109.0
+offset_right = 139.0
+offset_bottom = 175.0
+texture = ExtResource("7_oc4kc")
+stretch_mode = 3
+
+[node name="Question4" type="TextureRect" parent="."]
+offset_left = 141.0
+offset_top = 110.0
+offset_right = 255.0
+offset_bottom = 176.0
+texture = ExtResource("7_oc4kc")
+stretch_mode = 3
+
+[node name="Question5" type="TextureRect" parent="."]
+offset_left = 261.0
+offset_top = 109.0
+offset_right = 375.0
+offset_bottom = 175.0
+texture = ExtResource("7_oc4kc")
+stretch_mode = 3
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 
