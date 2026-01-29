@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bsns6fy2hsldx" path="res://scenes/char_spot.gd" id="1_bl8yf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hhxem"]
-size = Vector2(20.375, 42.5)
+size = Vector2(33.1875, 16.25)
 
 [node name="char_spot" type="Area2D" groups=["spots"]]
 collision_layer = 2

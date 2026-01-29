@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://desploocsv0ov"]
+[gd_scene load_steps=9 format=3 uid="uid://desploocsv0ov"]
 
 [ext_resource type="Script" uid="uid://bws71e0ixuj0w" path="res://scenes/levels/level_1.gd" id="1_x42e6"]
 [ext_resource type="Texture2D" uid="uid://yogmbemltanl" path="res://assets/level1_baggrund.png" id="2_sk5k4"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bop04jj0xm507" path="res://scenes/heart.tscn" id="5_6761a"]
 [ext_resource type="PackedScene" uid="uid://47hv7jhexrxc" path="res://scenes/levels/level_1_frames/frame_2.tscn" id="6_sk5k4"]
 [ext_resource type="Texture2D" uid="uid://155n6lsnq26k" path="res://assets/question_mark.png" id="7_oc4kc"]
+[ext_resource type="PackedScene" uid="uid://bydseank14tos" path="res://scenes/levels/level_1_frames/frame_6.tscn" id="8_s8va5"]
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_x42e6")
@@ -27,6 +28,9 @@ position = Vector2(143, 40)
 
 [node name="Frame3" parent="." instance=ExtResource("2_x42e6")]
 position = Vector2(262, 39)
+
+[node name="Frame6" parent="." instance=ExtResource("8_s8va5")]
+position = Vector2(261, 111)
 
 [node name="SceneItem" parent="." instance=ExtResource("3_6761a")]
 position = Vector2(239, 200.00002)
@@ -51,10 +55,10 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CheckButton" type="Button" parent="."]
-offset_left = 311.0
-offset_top = 181.0
-offset_right = 371.0
-offset_bottom = 212.0
+offset_left = 335.0
+offset_top = 179.0
+offset_right = 395.0
+offset_bottom = 210.0
 focus_mode = 0
 flat = true
 

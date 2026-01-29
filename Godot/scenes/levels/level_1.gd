@@ -4,6 +4,9 @@ extends Node
 @export var frame_1_solved = false
 @export var frame_2_solved = false
 @export var frame_3_solved = false
+@export var frame_4_solved = false
+@export var frame_5_solved = false
+@export var frame_6_solved = false
 
 @export var frame_1_text = ""
 @export var frame_2_text = ""
@@ -56,8 +59,16 @@ func checker() -> void:
 			print("Frame 3 solved!")
 			frame_3_solved = true
 			$Frame3.disable_monitoring()
-			$Question3.queue_free()
+			$Frame6.enable_monitoring()
+			$Question5.queue_free()
 			$Label.text = frame_4_text
+			return
+	if not frame_6_solved:
+		if $Frame6.solved:
+			print("Frame 6 solved!")
+			frame_6_solved = true
+			$Frame6.disable_monitoring()
+			$Label.text = frame_6_text
 			return
 	life_lost()
 
