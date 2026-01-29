@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5xl2lhvp56w3"]
+
+[ext_resource type="Texture2D" uid="uid://cj44dnqddo5f4" path="res://assets/danmark_kort.png" id="1_wv580"]
+[ext_resource type="Script" uid="uid://p54vq1570kjl" path="res://scenes/levels/level_1_frames/texture_2.gd" id="2_wv580"]
+[ext_resource type="Texture2D" uid="uid://drk6crecs1o55" path="res://assets/map_pin.png" id="3_bwt7v"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 114.0
+offset_bottom = 64.0
+texture = ExtResource("1_wv580")
+expand_mode = 1
+script = ExtResource("2_wv580")
+
+[node name="Wrong" type="Button" parent="."]
+layout_mode = 0
+offset_right = 115.0
+offset_bottom = 64.0
+focus_mode = 0
+flat = true
+
+[node name="Cop" type="Button" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 30.0
+offset_right = 83.0
+offset_bottom = 42.0
+focus_mode = 0
+flat = true
+
+[node name="Aalb" type="Button" parent="."]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 9.0
+offset_right = 44.0
+offset_bottom = 17.0
+focus_mode = 0
+flat = true
+
+[node name="CopPin" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 75.0
+offset_top = 30.0
+offset_right = 83.0
+offset_bottom = 40.0
+texture = ExtResource("3_bwt7v")
+expand_mode = 1
+
+[node name="AalbPin" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 36.0
+offset_top = 6.0
+offset_right = 44.0
+offset_bottom = 16.0
+texture = ExtResource("3_bwt7v")
+
+[connection signal="pressed" from="Cop" to="." method="_on_cop_pressed"]
+[connection signal="pressed" from="Aalb" to="." method="_on_aalb_pressed"]

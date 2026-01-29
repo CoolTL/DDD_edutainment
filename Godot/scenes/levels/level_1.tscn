@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://desploocsv0ov"]
+[gd_scene load_steps=7 format=3 uid="uid://desploocsv0ov"]
 
-[ext_resource type="Texture2D" uid="uid://ddrbpy0qn8gbo" path="res://assets/temp_background.jpg" id="1_nsrm0"]
 [ext_resource type="Script" uid="uid://bws71e0ixuj0w" path="res://scenes/levels/level_1.gd" id="1_x42e6"]
+[ext_resource type="Texture2D" uid="uid://yogmbemltanl" path="res://assets/level1_baggrund.png" id="2_sk5k4"]
 [ext_resource type="PackedScene" uid="uid://nvlm51erhndn" path="res://scenes/frame.tscn" id="2_x42e6"]
 [ext_resource type="PackedScene" uid="uid://bls5gqavwlnd8" path="res://scenes/scene_item.tscn" id="3_6761a"]
 [ext_resource type="PackedScene" uid="uid://bop04jj0xm507" path="res://scenes/heart.tscn" id="5_6761a"]
+[ext_resource type="PackedScene" uid="uid://47hv7jhexrxc" path="res://scenes/levels/level_1_frames/frame_2.tscn" id="6_sk5k4"]
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_x42e6")
@@ -14,13 +15,13 @@ light_mask = 0
 visibility_layer = 4
 offset_right = 400.0
 offset_bottom = 225.0
-texture = ExtResource("1_nsrm0")
+texture = ExtResource("2_sk5k4")
 
 [node name="Frame" parent="." instance=ExtResource("2_x42e6")]
 position = Vector2(26, 39)
 
-[node name="Frame2" parent="." instance=ExtResource("2_x42e6")]
-position = Vector2(144, 39)
+[node name="Frame2" parent="." instance=ExtResource("6_sk5k4")]
+position = Vector2(143, 40)
 
 [node name="Frame3" parent="." instance=ExtResource("2_x42e6")]
 position = Vector2(262, 39)
@@ -33,14 +34,14 @@ position = Vector2(116, 195)
 back_index = 1
 
 [node name="SceneItem3" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(274, 194.99998)
+position = Vector2(198, 195)
 
 [node name="Area2D" parent="SceneItem3" index="1"]
 collision_layer = 2
 collision_mask = 2
 
 [node name="SceneItem4" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(337, 194)
+position = Vector2(271, 196)
 char_index = 1
 
 [node name="Area2D" parent="SceneItem4" index="1"]
@@ -48,11 +49,12 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CheckButton" type="Button" parent="."]
-offset_left = 161.0
-offset_top = 184.0
-offset_right = 221.0
-offset_bottom = 215.0
-text = "Check"
+offset_left = 311.0
+offset_top = 181.0
+offset_right = 371.0
+offset_bottom = 212.0
+focus_mode = 0
+flat = true
 
 [node name="Heart" parent="." instance=ExtResource("5_6761a")]
 position = Vector2(28, 19)
