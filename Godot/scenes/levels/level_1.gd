@@ -5,6 +5,13 @@ extends Node
 @export var frame_2_solved = false
 @export var frame_3_solved = false
 
+@export var frame_1_text = ""
+@export var frame_2_text = ""
+@export var frame_3_text = ""
+@export var frame_4_text = ""
+@export var frame_5_text = ""
+@export var frame_6_text = ""
+
 var heart = preload("res://scenes/heart.tscn")
 
 @onready var hearts = [$Heart]
@@ -19,6 +26,7 @@ func _ready() -> void:
 		life.position.x += (counter + 1) * 34
 		hearts.append(life)
 		counter += 1
+	$Label.text = frame_1_text
 	# For testing purposes we check if we pre-set any frames to solved
 	# NOTE Doesn't work yet
 	#checker()
@@ -32,6 +40,7 @@ func checker() -> void:
 			$Frame.disable_monitoring()
 			$Frame2.enable_monitoring()
 			$Question1.queue_free()
+			$Label.text = frame_2_text
 			return
 	if not frame_2_solved:
 		if $Frame2.solved:
@@ -40,6 +49,7 @@ func checker() -> void:
 			$Frame2.disable_monitoring()
 			$Frame3.enable_monitoring()
 			$Question2.queue_free()
+			$Label.text = frame_3_text
 			return
 	if not frame_3_solved:
 		if $Frame3.solved:
@@ -47,6 +57,7 @@ func checker() -> void:
 			frame_3_solved = true
 			$Frame3.disable_monitoring()
 			$Question3.queue_free()
+			$Label.text = frame_4_text
 			return
 	life_lost()
 

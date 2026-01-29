@@ -10,6 +10,7 @@
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_x42e6")
+frame_1_text = "Indsæt baggrunde ved at trække \"itemsne\" til venstre over det første frame"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 light_mask = 0
@@ -28,21 +29,21 @@ position = Vector2(143, 40)
 position = Vector2(262, 39)
 
 [node name="SceneItem" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(59, 194)
+position = Vector2(239, 200.00002)
 
 [node name="SceneItem2" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(116, 195)
+position = Vector2(263, 198)
 back_index = 1
 
 [node name="SceneItem3" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(198, 195)
+position = Vector2(293, 207.00002)
 
 [node name="Area2D" parent="SceneItem3" index="1"]
 collision_layer = 2
 collision_mask = 2
 
 [node name="SceneItem4" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(271, 196)
+position = Vector2(317, 207)
 char_index = 1
 
 [node name="Area2D" parent="SceneItem4" index="1"]
@@ -99,6 +100,17 @@ offset_right = 375.0
 offset_bottom = 175.0
 texture = ExtResource("7_oc4kc")
 stretch_mode = 3
+
+[node name="Label" type="Label" parent="."]
+offset_left = 9.0
+offset_top = 185.0
+offset_right = 218.0
+offset_bottom = 220.0
+theme_override_colors/font_color = Color(0.12156863, 0.12156863, 0.09803922, 1)
+theme_override_constants/line_spacing = 1
+theme_override_font_sizes/font_size = 7
+autowrap_mode = 3
+clip_text = true
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 
