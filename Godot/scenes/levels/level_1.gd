@@ -59,16 +59,33 @@ func checker() -> void:
 			print("Frame 3 solved!")
 			frame_3_solved = true
 			$Frame3.disable_monitoring()
+			$Frame4.enable_monitoring()
+			$Question3.queue_free()
+			$Label.text = frame_4_text
+			return
+	if not frame_4_solved:
+		if $Frame4.solved:
+			print("Frame 4 solved!")
+			frame_4_solved = true
+			$Frame4.disable_monitoring()
+			$Frame5.enable_monitoring()
+			$Question4.queue_free()
+			$Label.text = frame_5_text
+			return
+	if not frame_5_solved:
+		if $Frame5.solved:
+			print("Frame 5 solved!")
+			frame_5_solved = true
+			$Frame5.disable_monitoring()
 			$Frame6.enable_monitoring()
 			$Question5.queue_free()
-			$Label.text = frame_4_text
+			$Label.text = frame_6_text
 			return
 	if not frame_6_solved:
 		if $Frame6.solved:
 			print("Frame 6 solved!")
 			frame_6_solved = true
 			$Frame6.disable_monitoring()
-			$Label.text = frame_6_text
 			return
 	life_lost()
 
@@ -76,10 +93,12 @@ func checker() -> void:
 func life_lost() -> void:
 	print("Life lost")
 	lives -= 1
+	hearts[-1].queue_free()
 	if lives <= 0:
+		$GameOver.show()
 		print("Game over")
 	else:
-		hearts[-1].queue_free()
+		
 		hearts.remove_at(-1)
 
 

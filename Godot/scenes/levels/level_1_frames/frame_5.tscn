@@ -1,20 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://ufjik5j7ibwo"]
+[gd_scene load_steps=4 format=3 uid="uid://bx2ufntudms67"]
 
-[ext_resource type="Script" uid="uid://njkvcpfu3v1n" path="res://scenes/levels/level_1_frames/frame_4.gd" id="1_lxuqg"]
-[ext_resource type="PackedScene" uid="uid://ic3whdaks8yi" path="res://scenes/levels/level_1_frames/texture_4.tscn" id="2_lxuqg"]
+[ext_resource type="Script" uid="uid://ebk1qy2jjbnw" path="res://scenes/levels/level_1_frames/frame_5.gd" id="1_3js36"]
+[ext_resource type="PackedScene" uid="uid://bitnnjcgkshvj" path="res://scenes/levels/level_1_frames/texture_5.tscn" id="2_0v83f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_law6f"]
 size = Vector2(116.5, 66.5)
 
 [node name="Frame" type="Area2D" groups=["frames"]]
 monitoring = false
-script = ExtResource("1_lxuqg")
+script = ExtResource("1_3js36")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(57.75, 32.75)
 shape = SubResource("RectangleShape2D_law6f")
 
-[node name="TextureRect" parent="." instance=ExtResource("2_lxuqg")]
+[node name="TextureRect" parent="." instance=ExtResource("2_0v83f")]
 visible = false
 
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

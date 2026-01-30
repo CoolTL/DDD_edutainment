@@ -1,13 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://desploocsv0ov"]
+[gd_scene load_steps=12 format=3 uid="uid://desploocsv0ov"]
 
 [ext_resource type="Script" uid="uid://bws71e0ixuj0w" path="res://scenes/levels/level_1.gd" id="1_x42e6"]
 [ext_resource type="Texture2D" uid="uid://yogmbemltanl" path="res://assets/level1_baggrund.png" id="2_sk5k4"]
 [ext_resource type="PackedScene" uid="uid://nvlm51erhndn" path="res://scenes/frame.tscn" id="2_x42e6"]
 [ext_resource type="PackedScene" uid="uid://bls5gqavwlnd8" path="res://scenes/scene_item.tscn" id="3_6761a"]
 [ext_resource type="PackedScene" uid="uid://bop04jj0xm507" path="res://scenes/heart.tscn" id="5_6761a"]
+[ext_resource type="PackedScene" uid="uid://ufjik5j7ibwo" path="res://scenes/levels/level_1_frames/frame_4.tscn" id="5_qxy0u"]
 [ext_resource type="PackedScene" uid="uid://47hv7jhexrxc" path="res://scenes/levels/level_1_frames/frame_2.tscn" id="6_sk5k4"]
 [ext_resource type="Texture2D" uid="uid://155n6lsnq26k" path="res://assets/question_mark.png" id="7_oc4kc"]
 [ext_resource type="PackedScene" uid="uid://bydseank14tos" path="res://scenes/levels/level_1_frames/frame_6.tscn" id="8_s8va5"]
+[ext_resource type="PackedScene" uid="uid://7g4tohppxvhc" path="res://scenes/game_over.tscn" id="9_dga24"]
+[ext_resource type="PackedScene" uid="uid://bx2ufntudms67" path="res://scenes/levels/level_1_frames/frame_5.tscn" id="11_excbq"]
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_x42e6")
@@ -28,6 +31,12 @@ position = Vector2(143, 40)
 
 [node name="Frame3" parent="." instance=ExtResource("2_x42e6")]
 position = Vector2(262, 39)
+
+[node name="Frame4" parent="." instance=ExtResource("5_qxy0u")]
+position = Vector2(25, 110)
+
+[node name="Frame5" parent="." instance=ExtResource("11_excbq")]
+position = Vector2(144, 110)
 
 [node name="Frame6" parent="." instance=ExtResource("8_s8va5")]
 position = Vector2(261, 111)
@@ -98,9 +107,9 @@ texture = ExtResource("7_oc4kc")
 stretch_mode = 3
 
 [node name="Question5" type="TextureRect" parent="."]
-offset_left = 261.0
+offset_left = 262.0
 offset_top = 109.0
-offset_right = 375.0
+offset_right = 376.0
 offset_bottom = 175.0
 texture = ExtResource("7_oc4kc")
 stretch_mode = 3
@@ -115,6 +124,9 @@ theme_override_constants/line_spacing = 1
 theme_override_font_sizes/font_size = 7
 autowrap_mode = 3
 clip_text = true
+
+[node name="GameOver" parent="." instance=ExtResource("9_dga24")]
+visible = false
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
 
