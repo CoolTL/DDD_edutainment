@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmok5np6klebu"]
+
+[ext_resource type="Texture2D" uid="uid://c7ae0v350sicf" path="res://assets/two_guys_two_papers.png" id="1_rcnls"]
+[ext_resource type="Script" uid="uid://j4nk0ni3fgd1" path="res://scenes/levels/level_1_frames/texture_3.gd" id="2_r13eq"]
+[ext_resource type="PackedScene" uid="uid://bjlgnqq68u12d" path="res://scenes/char_spot_3.tscn" id="3_rcnls"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 114.0
+offset_bottom = 64.0
+texture = ExtResource("1_rcnls")
+expand_mode = 1
+script = ExtResource("2_r13eq")
+
+[node name="char_spot" parent="." instance=ExtResource("3_rcnls")]
+
+[editable path="char_spot"]

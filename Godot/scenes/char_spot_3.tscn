@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjlgnqq68u12d"]
+
+[ext_resource type="Script" uid="uid://by3m7yqsl7jol" path="res://scenes/char_spot_3.gd" id="1_kj3gf"]
+[ext_resource type="Texture2D" uid="uid://do3tgprarscud" path="res://assets/paper_1.png" id="2_c4fn2"]
+[ext_resource type="Texture2D" uid="uid://bbstxhjdssivn" path="res://assets/paper_2.png" id="3_ws335"]
+[ext_resource type="Texture2D" uid="uid://h7atec3npm33" path="res://assets/person_1.png" id="4_4nfdf"]
+[ext_resource type="Texture2D" uid="uid://c24qmvjrdsva4" path="res://assets/person_2.png" id="5_dxjxw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhxem"]
+size = Vector2(35, 47)
+
+[node name="char_spot" type="Area2D" groups=["spots"]]
+collision_layer = 2
+collision_mask = 2
+monitoring = false
+script = ExtResource("1_kj3gf")
+
+[node name="Paper1" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_c4fn2")
+
+[node name="Paper2" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_ws335")
+
+[node name="Person1" type="TextureRect" parent="."]
+offset_right = 114.0
+offset_bottom = 64.0
+texture = ExtResource("4_4nfdf")
+
+[node name="Person2" type="TextureRect" parent="."]
+offset_right = 114.0
+offset_bottom = 64.0
+texture = ExtResource("5_dxjxw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18.5, 40.5)
+shape = SubResource("RectangleShape2D_hhxem")
+
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
