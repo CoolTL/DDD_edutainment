@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://brtru5nu1f0s0"]
+[gd_scene load_steps=3 format=3 uid="uid://brtru5nu1f0s0"]
 
 [ext_resource type="Texture2D" uid="uid://ddrbpy0qn8gbo" path="res://assets/temp_background.jpg" id="1_yqeox"]
+[ext_resource type="Script" uid="uid://cmfxjbc4icxxx" path="res://scenes/main_menu.gd" id="2_vjb58"]
 
 [node name="Node" type="Node"]
 
@@ -8,11 +9,32 @@
 offset_right = 401.0
 offset_bottom = 224.0
 texture = ExtResource("1_yqeox")
+script = ExtResource("2_vjb58")
 
-[node name="TextEdit" type="TextEdit" parent="TextureRect"]
+[node name="Label" type="Label" parent="TextureRect"]
 layout_mode = 0
-offset_left = 126.0
-offset_top = 5.0
-offset_right = 281.0
-offset_bottom = 57.0
-text = "Historierækkken"
+offset_left = 130.0
+offset_top = 23.0
+offset_right = 267.0
+offset_bottom = 46.0
+text = "Historierækken"
+
+[node name="Bes" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 61.0
+offset_right = 257.0
+offset_bottom = 106.0
+text = "Besættelsen"
+
+[node name="DBF" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 115.0
+offset_right = 255.0
+offset_bottom = 158.0
+text = "Den Danske Flåde"
+autowrap_mode = 2
+
+[connection signal="pressed" from="TextureRect/Bes" to="TextureRect" method="_on_bes_pressed"]
+[connection signal="pressed" from="TextureRect/DBF" to="TextureRect" method="_on_dbf_pressed"]
