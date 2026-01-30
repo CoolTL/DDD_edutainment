@@ -12,7 +12,9 @@ expand_mode = 1
 script = ExtResource("2_0dflu")
 
 [node name="char_spot" parent="." instance=ExtResource("3_is1oc")]
-position = Vector2(45, 20)
+position = Vector2(55, 9)
+correct_text = "Yes"
+wrong_text = "No"
 
 [node name="Label" type="Label" parent="char_spot"]
 offset_left = -14.0
@@ -20,7 +22,6 @@ offset_top = -7.0
 offset_right = 14.0
 offset_bottom = 7.0
 theme_override_font_sizes/font_size = 10
-text = "123"
 metadata/_edit_group_ = true
 
 [editable path="char_spot"]
