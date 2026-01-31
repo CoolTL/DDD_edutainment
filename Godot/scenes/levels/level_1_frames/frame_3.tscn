@@ -15,6 +15,7 @@ position = Vector2(57.75, 32.75)
 shape = SubResource("RectangleShape2D_law6f")
 
 [node name="TextureRect" parent="." instance=ExtResource("2_ku48m")]
+visible = false
 
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="correct" from="TextureRect" to="." method="_on_texture_rect_correct"]

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c24qmvjrdsva4" path="res://assets/person_2.png" id="5_dxjxw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hhxem"]
-size = Vector2(35, 47)
+size = Vector2(64, 61.5)
 
 [node name="char_spot" type="Area2D" groups=["spots"]]
 collision_layer = 2
@@ -16,21 +16,25 @@ monitoring = false
 script = ExtResource("1_kj3gf")
 
 [node name="Paper1" type="TextureRect" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_c4fn2")
 
 [node name="Paper2" type="TextureRect" parent="."]
+visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("3_ws335")
 
 [node name="Person1" type="TextureRect" parent="."]
+visible = false
 offset_right = 114.0
 offset_bottom = 64.0
 texture = ExtResource("4_4nfdf")
 
 [node name="Person2" type="TextureRect" parent="."]
+visible = false
 offset_right = 114.0
 offset_bottom = 64.0
 texture = ExtResource("5_dxjxw")

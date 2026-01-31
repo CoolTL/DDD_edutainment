@@ -11,7 +11,7 @@ func _ready() -> void:
 
 # This function is where we define the correct configuration of the frame
 func check():
-	if $char_spot/ColorRect.visible:
+	if $char_spot/Person1.visible and $char_spot2/Person2.visible and $char_spot3/Paper1.visible and $char_spot4/Paper2.visible:
 		correct.emit()
 	else:
 		not_correct.emit()

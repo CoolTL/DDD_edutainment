@@ -13,4 +13,28 @@ script = ExtResource("2_r13eq")
 
 [node name="char_spot" parent="." instance=ExtResource("3_rcnls")]
 
+[node name="CollisionShape2D" parent="char_spot" index="4"]
+position = Vector2(34, 40.5)
+
+[node name="char_spot2" parent="." instance=ExtResource("3_rcnls")]
+index = 1
+
+[node name="CollisionShape2D" parent="char_spot2" index="4"]
+position = Vector2(33, 40)
+
+[node name="char_spot3" parent="." instance=ExtResource("3_rcnls")]
+index = 2
+
+[node name="CollisionShape2D" parent="char_spot3" index="4"]
+position = Vector2(83, 31)
+
+[node name="char_spot4" parent="." instance=ExtResource("3_rcnls")]
+index = 3
+
+[node name="CollisionShape2D" parent="char_spot4" index="4"]
+position = Vector2(82, 32)
+
 [editable path="char_spot"]
+[editable path="char_spot2"]
+[editable path="char_spot3"]
+[editable path="char_spot4"]
