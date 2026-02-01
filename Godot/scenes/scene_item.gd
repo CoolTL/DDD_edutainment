@@ -1,13 +1,15 @@
-extends Sprite2D
+extends AnimatedSprite2D
 
 var dragging = false
 var of = Vector2(0,0)
 var start_pos = 0
 @export var back_index = 0
 @export var char_index = 0
+@export var item_frame = 0
 
 func _ready():
 	#print(name, " layer=", $Area2D.collision_layer, " mask=", $Area2D.collision_mask)
+	self.frame = item_frame
 	pass
 
 
