@@ -6,16 +6,19 @@
 [ext_resource type="PackedScene" uid="uid://bls5gqavwlnd8" path="res://scenes/scene_item.tscn" id="3_6761a"]
 [ext_resource type="PackedScene" uid="uid://bop04jj0xm507" path="res://scenes/heart.tscn" id="5_6761a"]
 [ext_resource type="PackedScene" uid="uid://bw032r0t0jayv" path="res://scenes/levels/level_1_frames/frame_3.tscn" id="5_iav0o"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_1_frames/frame_4.tscn" id="5_qxy0u"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_1_frames/frame_2.tscn" id="6_sk5k4"]
+[ext_resource type="PackedScene" uid="uid://ufjik5j7ibwo" path="res://scenes/levels/level_1_frames/frame_4.tscn" id="5_qxy0u"]
+[ext_resource type="PackedScene" uid="uid://47hv7jhexrxc" path="res://scenes/levels/level_1_frames/frame_2.tscn" id="6_sk5k4"]
 [ext_resource type="Texture2D" uid="uid://155n6lsnq26k" path="res://assets/question_mark.png" id="7_oc4kc"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_1_frames/frame_6.tscn" id="8_s8va5"]
+[ext_resource type="PackedScene" uid="uid://bydseank14tos" path="res://scenes/levels/level_1_frames/frame_6.tscn" id="8_s8va5"]
 [ext_resource type="PackedScene" uid="uid://7g4tohppxvhc" path="res://scenes/game_over.tscn" id="9_dga24"]
 [ext_resource type="PackedScene" uid="uid://bx2ufntudms67" path="res://scenes/levels/level_1_frames/frame_5.tscn" id="11_excbq"]
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_x42e6")
 frame_1_text = "Indsæt baggrunde ved at trække \"itemsne\" til venstre over det første frame"
+frame_2_text = "Hvor ligger København og Aalborg?"
+frame_3_text = "Tegn to tyske diplomater med to dokumenter!"
+frame_4_text = "Tyske folk giver dokument til dansk diplomat _____?"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 light_mask = 0
@@ -28,10 +31,10 @@ texture = ExtResource("2_sk5k4")
 position = Vector2(26, 39)
 
 [node name="Frame2" parent="." instance=ExtResource("6_sk5k4")]
-position = Vector2(143, 40)
+position = Vector2(143, 39)
 
 [node name="Frame3" parent="." instance=ExtResource("5_iav0o")]
-position = Vector2(261, 40)
+position = Vector2(261, 39)
 
 [node name="Frame4" parent="." instance=ExtResource("5_qxy0u")]
 position = Vector2(25, 110)
@@ -41,39 +44,6 @@ position = Vector2(144, 110)
 
 [node name="Frame6" parent="." instance=ExtResource("8_s8va5")]
 position = Vector2(261, 111)
-
-[node name="SceneItem" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(239, 200.00002)
-
-[node name="SceneItem2" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(263, 198)
-back_index = 1
-
-[node name="SceneItem3" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(293, 207.00002)
-
-[node name="Area2D" parent="SceneItem3" index="1"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="SceneItem4" parent="." instance=ExtResource("3_6761a")]
-position = Vector2(317, 207)
-char_index = 1
-
-[node name="Area2D" parent="SceneItem4" index="1"]
-collision_layer = 2
-collision_mask = 2
-
-[node name="CheckButton" type="Button" parent="."]
-offset_left = 335.0
-offset_top = 179.0
-offset_right = 395.0
-offset_bottom = 210.0
-focus_mode = 0
-flat = true
-
-[node name="Heart" parent="." instance=ExtResource("5_6761a")]
-position = Vector2(302, 19)
 
 [node name="Question1" type="TextureRect" parent="."]
 offset_left = 143.0
@@ -114,6 +84,42 @@ offset_right = 376.0
 offset_bottom = 175.0
 texture = ExtResource("7_oc4kc")
 stretch_mode = 3
+
+[node name="SceneItem" parent="." instance=ExtResource("3_6761a")]
+position = Vector2(240, 202)
+
+[node name="SceneItem2" parent="." instance=ExtResource("3_6761a")]
+position = Vector2(265, 202)
+back_index = 1
+item_frame = 1
+
+[node name="SceneItem3" parent="." instance=ExtResource("3_6761a")]
+position = Vector2(291, 202)
+item_frame = 2
+
+[node name="Area2D" parent="SceneItem3" index="1"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="SceneItem4" parent="." instance=ExtResource("3_6761a")]
+position = Vector2(316, 202)
+char_index = 1
+item_frame = 3
+
+[node name="Area2D" parent="SceneItem4" index="1"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CheckButton" type="Button" parent="."]
+offset_left = 335.0
+offset_top = 179.0
+offset_right = 395.0
+offset_bottom = 210.0
+focus_mode = 0
+flat = true
+
+[node name="Heart" parent="." instance=ExtResource("5_6761a")]
+position = Vector2(302, 19)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 9.0
