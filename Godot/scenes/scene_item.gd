@@ -3,7 +3,7 @@ extends AnimatedSprite2D
 var dragging = false
 var of = Vector2(0,0)
 var start_pos = 0
-@export var back_index = 0
+
 @export var char_index = 0
 @export var item_frame = 0
 

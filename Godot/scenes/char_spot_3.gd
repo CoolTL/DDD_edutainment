@@ -28,6 +28,12 @@ func _on_area_exited(area: Area2D) -> void:
 		if area.get_parent().char_index == 1 and area.get_parent().char_index == index:
 			clear_spot()
 			$Person2.show()
+		if area.get_parent().char_index == 2 and area.get_parent().char_index == index:
+			clear_spot()
+			$Paper1.show()
+		if area.get_parent().char_index == 3 and area.get_parent().char_index == index:
+			clear_spot()
+			$Paper2.show()
 		#elif area.get_parent().char_index == 1:
 			#clear_spot()
 		changed.emit()

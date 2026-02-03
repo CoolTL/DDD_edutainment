@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://bop04jj0xm507" path="res://scenes/heart.tscn" id="5_6761a"]
 [ext_resource type="PackedScene" uid="uid://bw032r0t0jayv" path="res://scenes/levels/level_1_frames/frame_3.tscn" id="5_iav0o"]
 [ext_resource type="PackedScene" uid="uid://cnxx82ly8yxvy" path="res://scenes/levels/level_1_frames/frame_4.tscn" id="5_qxy0u"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_1_frames/frame_2.tscn" id="6_sk5k4"]
+[ext_resource type="PackedScene" uid="uid://blhgel1pq1gj3" path="res://scenes/levels/level_1_frames/frame_2.tscn" id="6_sk5k4"]
 [ext_resource type="Texture2D" uid="uid://155n6lsnq26k" path="res://assets/question_mark.png" id="7_oc4kc"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_1_frames/frame_6.tscn" id="8_s8va5"]
+[ext_resource type="PackedScene" uid="uid://cmvalugpg4phn" path="res://scenes/levels/level_1_frames/frame_6.tscn" id="8_s8va5"]
 [ext_resource type="PackedScene" uid="uid://7g4tohppxvhc" path="res://scenes/game_over.tscn" id="9_dga24"]
 [ext_resource type="PackedScene" uid="uid://bx2ufntudms67" path="res://scenes/levels/level_1_frames/frame_5.tscn" id="11_excbq"]
 
@@ -34,16 +34,16 @@ position = Vector2(24, 40)
 position = Vector2(143, 40)
 
 [node name="Frame3" parent="." instance=ExtResource("5_iav0o")]
-position = Vector2(261, 40)
+position = Vector2(262, 40)
 
 [node name="Frame4" parent="." instance=ExtResource("5_qxy0u")]
-position = Vector2(25, 110)
+position = Vector2(24, 110)
 
 [node name="Frame5" parent="." instance=ExtResource("11_excbq")]
-position = Vector2(144, 110)
+position = Vector2(143, 110)
 
 [node name="Frame6" parent="." instance=ExtResource("8_s8va5")]
-position = Vector2(261, 111)
+position = Vector2(262, 110)
 
 [node name="Question1" type="TextureRect" parent="."]
 offset_left = 143.0
@@ -90,25 +90,18 @@ position = Vector2(240, 202)
 
 [node name="SceneItem2" parent="." instance=ExtResource("3_6761a")]
 position = Vector2(265, 202)
-back_index = 1
+char_index = 1
 item_frame = 1
 
 [node name="SceneItem3" parent="." instance=ExtResource("3_6761a")]
 position = Vector2(291, 202)
+char_index = 2
 item_frame = 2
-
-[node name="Area2D" parent="SceneItem3" index="1"]
-collision_layer = 2
-collision_mask = 2
 
 [node name="SceneItem4" parent="." instance=ExtResource("3_6761a")]
 position = Vector2(316, 202)
-char_index = 1
+char_index = 3
 item_frame = 3
-
-[node name="Area2D" parent="SceneItem4" index="1"]
-collision_layer = 2
-collision_mask = 2
 
 [node name="CheckButton" type="Button" parent="."]
 offset_left = 335.0
@@ -136,6 +129,3 @@ clip_text = true
 visible = false
 
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
-
-[editable path="SceneItem3"]
-[editable path="SceneItem4"]
