@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dn207hxjbhvc6" path="res://scenes/levels/level_2.gd" id="1_g2h2n"]
 [ext_resource type="Texture2D" uid="uid://b7kgtid77ujsi" path="res://assets/level2_baggrund.png" id="1_j2425"]
 [ext_resource type="PackedScene" uid="uid://csv8ovvh1udk0" path="res://scenes/levels/level_2_frames/framelvl2.tscn" id="3_ra442"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_2_frames/framelvl2_2.tscn" id="4_8qukl"]
+[ext_resource type="PackedScene" uid="uid://dp82u08lmt0vj" path="res://scenes/levels/level_2_frames/framelvl2_2.tscn" id="4_8qukl"]
 [ext_resource type="PackedScene" uid="uid://bls5gqavwlnd8" path="res://scenes/scene_item.tscn" id="4_ibugp"]
 [ext_resource type="PackedScene" uid="uid://bop04jj0xm507" path="res://scenes/heart.tscn" id="5_8qukl"]
 [ext_resource type="PackedScene" uid="uid://7g4tohppxvhc" path="res://scenes/game_over.tscn" id="6_3p04p"]
