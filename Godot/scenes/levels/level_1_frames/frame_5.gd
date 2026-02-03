@@ -15,6 +15,10 @@ func _process(_delta: float) -> void:
 func hide_background() -> void:
 	$TextureRect.hide()
 
+func show_background() -> void:
+	$TextureRect.show()
+	$TextureRect.enable_spots()
+
 func enable_monitoring() -> void:
 	self.monitoring = true
 

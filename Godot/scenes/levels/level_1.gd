@@ -21,6 +21,7 @@ var heart = preload("res://scenes/heart.tscn")
 
 func _ready() -> void:
 	$Frame.enable_monitoring()
+	$Frame.show_background()
 	var counter = 0
 	for life in lives-1:
 		life = heart.instantiate()
@@ -42,6 +43,7 @@ func checker() -> void:
 			frame_1_solved = true
 			$Frame.disable_monitoring()
 			$Frame2.enable_monitoring()
+			$Frame2.show_background()
 			$Question1.queue_free()
 			$Label.text = frame_2_text
 			return
@@ -51,6 +53,7 @@ func checker() -> void:
 			frame_2_solved = true
 			$Frame2.disable_monitoring()
 			$Frame3.enable_monitoring()
+			$Frame3.show_background()
 			$Question2.queue_free()
 			$Label.text = frame_3_text
 			return
@@ -60,6 +63,7 @@ func checker() -> void:
 			frame_3_solved = true
 			$Frame3.disable_monitoring()
 			$Frame4.enable_monitoring()
+			$Frame4.show_background()
 			$Question3.queue_free()
 			$Label.text = frame_4_text
 			return
@@ -69,6 +73,7 @@ func checker() -> void:
 			frame_4_solved = true
 			$Frame4.disable_monitoring()
 			$Frame5.enable_monitoring()
+			$Frame5.show_background()
 			$Question4.queue_free()
 			$Label.text = frame_5_text
 			return
@@ -78,6 +83,7 @@ func checker() -> void:
 			frame_5_solved = true
 			$Frame5.disable_monitoring()
 			$Frame6.enable_monitoring()
+			$Frame6.show_background()
 			$Question5.queue_free()
 			$Label.text = frame_6_text
 			return

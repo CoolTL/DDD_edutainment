@@ -5,7 +5,7 @@ var solved = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,6 +14,10 @@ func _process(_delta: float) -> void:
 
 func hide_background() -> void:
 	$TextureRect.hide()
+
+func show_background() -> void:
+	$TextureRect.show()
+	$TextureRect.enable_spots()
 
 func enable_monitoring() -> void:
 	self.monitoring = true

@@ -18,6 +18,10 @@ func hide_background() -> void:
 func enable_monitoring() -> void:
 	self.monitoring = true
 
+func show_background() -> void:
+	$TextureRect.show()
+	$TextureRect.enable_spots()
+
 func disable_monitoring() -> void:
 	self.monitoring = false
 	$TextureRect.disable_spots()
