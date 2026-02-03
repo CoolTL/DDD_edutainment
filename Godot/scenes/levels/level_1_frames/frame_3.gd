@@ -2,6 +2,7 @@ extends Area2D
 
 
 var solved = false
+@export var needed_items = 4
 
 func hide_background() -> void:
 	$TextureRect.hide()
