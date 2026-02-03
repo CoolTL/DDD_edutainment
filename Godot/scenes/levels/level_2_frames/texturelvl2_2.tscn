@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://berv5l3c0qrh6"]
+
+[ext_resource type="Texture2D" uid="uid://upsvwqrmatk" path="res://assets/bombe_flåde.png" id="1_h47ks"]
+[ext_resource type="Script" uid="uid://j4nk0ni3fgd1" path="res://scenes/levels/level_1_frames/texture_3.gd" id="2_r13eq"]
+[ext_resource type="PackedScene" uid="uid://byi5a8vp7h04w" path="res://scenes/levels/level_2_frames/char_spotlvl2_2.tscn" id="3_etvgg"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 114.0
+offset_bottom = 64.0
+texture = ExtResource("1_h47ks")
+expand_mode = 1
+script = ExtResource("2_r13eq")
+
+[node name="char_spot" parent="." instance=ExtResource("3_etvgg")]
+
+[node name="CollisionShape2D" parent="char_spot" index="0"]
+position = Vector2(43, 45)
+
+[node name="Label" parent="char_spot" index="1"]
+offset_left = 32.0
+offset_top = 39.0
+offset_right = 54.0
+offset_bottom = 53.0
+
+[node name="char_spot2" parent="." instance=ExtResource("3_etvgg")]
+position = Vector2(64, -9)
+index = 1
+
+[node name="CollisionShape2D" parent="char_spot2" index="0"]
+position = Vector2(37, 20.101563)
+
+[node name="Label" parent="char_spot2" index="1"]
+offset_left = 25.0
+offset_top = 12.0
+offset_right = 50.0
+offset_bottom = 28.0
+
+[editable path="char_spot"]
+[editable path="char_spot2"]

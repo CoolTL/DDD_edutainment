@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cw5ga8ij5krv"]
+
+[ext_resource type="Texture2D" uid="uid://ci4qvxtoag6kr" path="res://assets/ship_talk.png" id="1_ue6fr"]
+[ext_resource type="Script" uid="uid://5tmmov2gt3dy" path="res://scenes/levels/level_2_frames/texturelvl2.gd" id="2_dfdhx"]
+[ext_resource type="PackedScene" uid="uid://bherdjkme1adr" path="res://scenes/levels/level_2_frames/char_spotlvl2.tscn" id="3_hpxa7"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 114.0
+offset_bottom = 64.0
+texture = ExtResource("1_ue6fr")
+expand_mode = 1
+script = ExtResource("2_dfdhx")
+
+[node name="char_spot" parent="." instance=ExtResource("3_hpxa7")]
+position = Vector2(56, 48)
+correct_msg = "yes"
+wrong_msg = "no"
+
+[node name="CollisionShape2D" parent="char_spot" index="0"]
+position = Vector2(3, 0)
+
+[node name="Label" parent="char_spot" index="1"]
+offset_left = -12.0
+offset_top = -9.0
+offset_right = 15.0
+offset_bottom = 9.0
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[editable path="char_spot"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://byi5a8vp7h04w"]
+
+[ext_resource type="Script" uid="uid://cexv8xkiobds3" path="res://scenes/levels/level_2_frames/char_spotlvl2_2.gd" id="1_pa0o6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhxem"]
+size = Vector2(29, 18.203125)
+
+[node name="char_spot" type="Area2D" groups=["spots"]]
+collision_layer = 2
+collision_mask = 2
+monitoring = false
+monitorable = false
+script = ExtResource("1_pa0o6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18.5, 40.5)
+shape = SubResource("RectangleShape2D_hhxem")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -13.0
+offset_top = 9.0
+offset_right = 52.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

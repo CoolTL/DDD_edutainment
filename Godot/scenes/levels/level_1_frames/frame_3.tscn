@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bw032r0t0jayv"]
+[gd_scene format=3 uid="uid://bw032r0t0jayv"]
 
 [ext_resource type="Script" uid="uid://b42hwx8k8royu" path="res://scenes/levels/level_1_frames/frame_3.gd" id="1_7t2jg"]
 [ext_resource type="PackedScene" uid="uid://dmok5np6klebu" path="res://scenes/levels/level_1_frames/texture_3.tscn" id="2_ku48m"]
@@ -6,17 +6,23 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_law6f"]
 size = Vector2(116.5, 66.5)
 
-[node name="Frame" type="Area2D" groups=["frames"]]
+[node name="Frame" type="Area2D" unique_id=536061800 groups=["frames"]]
 monitoring = false
 script = ExtResource("1_7t2jg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=261856258]
 position = Vector2(57.75, 32.75)
 shape = SubResource("RectangleShape2D_law6f")
 
-[node name="TextureRect" parent="." instance=ExtResource("2_ku48m")]
+[node name="TextureRect" parent="." unique_id=1674874058 instance=ExtResource("2_ku48m")]
 visible = false
 
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="correct" from="TextureRect" to="." method="_on_texture_rect_correct"]
 [connection signal="not_correct" from="TextureRect" to="." method="_on_texture_rect_not_correct"]
+
+[editable path="TextureRect"]
+[editable path="TextureRect/char_spot"]
+[editable path="TextureRect/char_spot2"]
+[editable path="TextureRect/char_spot3"]
+[editable path="TextureRect/char_spot4"]

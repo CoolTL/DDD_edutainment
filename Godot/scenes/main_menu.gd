@@ -16,4 +16,4 @@ func _on_bes_pressed() -> void:
 
 
 func _on_dbf_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")
