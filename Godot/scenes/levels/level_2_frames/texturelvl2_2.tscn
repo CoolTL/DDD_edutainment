@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://berv5l3c0qrh6"]
 
 [ext_resource type="Texture2D" uid="uid://upsvwqrmatk" path="res://assets/bombe_flåde.png" id="1_h47ks"]
-[ext_resource type="Script" uid="uid://j4nk0ni3fgd1" path="res://scenes/levels/level_1_frames/texture_3.gd" id="2_r13eq"]
+[ext_resource type="Script" uid="uid://dpqh3wk4luypb" path="res://scenes/levels/level_2_frames/texturelvl2_2.gd" id="2_h47ks"]
 [ext_resource type="PackedScene" uid="uid://byi5a8vp7h04w" path="res://scenes/levels/level_2_frames/char_spotlvl2_2.tscn" id="3_etvgg"]
 
 [node name="TextureRect" type="TextureRect"]
@@ -9,9 +9,11 @@ offset_right = 114.0
 offset_bottom = 64.0
 texture = ExtResource("1_h47ks")
 expand_mode = 1
-script = ExtResource("2_r13eq")
+script = ExtResource("2_h47ks")
 
 [node name="char_spot" parent="." instance=ExtResource("3_etvgg")]
+correct_msg = "ja"
+wrong_msg = "nej"
 
 [node name="CollisionShape2D" parent="char_spot" index="0"]
 position = Vector2(43, 45)
@@ -24,6 +26,8 @@ offset_bottom = 53.0
 
 [node name="char_spot2" parent="." instance=ExtResource("3_etvgg")]
 position = Vector2(64, -9)
+correct_msg = "ja"
+wrong_msg = "nej"
 index = 1
 
 [node name="CollisionShape2D" parent="char_spot2" index="0"]
@@ -34,6 +38,34 @@ offset_left = 25.0
 offset_top = 12.0
 offset_right = 50.0
 offset_bottom = 28.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 25.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 5
+text = "Gør vi det?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 2.0
+offset_right = 84.0
+offset_bottom = 17.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 5
+text = "Er du sikker?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [editable path="char_spot"]
 [editable path="char_spot2"]
