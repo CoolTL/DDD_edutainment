@@ -15,8 +15,8 @@
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_x42e6")
-frame_1_text = "Indsæt baggrunde ved at trække \"itemsne\" til venstre over det første frame"
-frame_2_text = "Hvor ligger København og Aalborg?"
+frame_1_text = "Tyske tropper kommer fra grænsen mellem tyskland og danmark tidlig morgen den _____ 1940. Svare ved at trække en date fra item boksen over til tegneserie panellet."
+frame_2_text = "De tyske tropper ankommer til Danmark, hvor tager de hen?"
 frame_3_text = "Tegn to tyske diplomater med to dokumenter!"
 frame_4_text = "Tyske folk giver dokument til dansk diplomat _____?"
 
