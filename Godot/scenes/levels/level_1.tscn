@@ -18,7 +18,9 @@ script = ExtResource("1_x42e6")
 frame_1_text = "Tyske tropper kommer fra grænsen mellem tyskland og danmark tidlig morgen den _____ 1940. Svare ved at trække en date fra item boksen over til tegneserie panellet."
 frame_2_text = "De tyske tropper ankommer til Danmark, hvor tager de hen?"
 frame_3_text = "Tegn to tyske diplomater med to dokumenter!"
-frame_4_text = "Tyske folk giver dokument til dansk diplomat _____?"
+frame_4_text = "Tyske folk giver dokument til dansk diplomat P. _____?"
+frame_5_text = "Tyskerne insisterer på at deres krav bliver sat i spil. Hvordan reagerer P. Munch?"
+frame_6_text = "Hvad siger danmarks parliament?"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 light_mask = 0
