@@ -18,6 +18,8 @@ var heart = preload("res://scenes/heart.tscn")
 
 func _ready() -> void:
 	$Frame.enable_monitoring()
+	$Frame.show_background()
+	update_items($Frame.needed_items)
 	var counter = 0
 	for life in lives-1:
 		life = heart.instantiate()
@@ -31,6 +33,28 @@ func _ready() -> void:
 	# NOTE Doesn't work yet
 	#checker()
 
+func update_items(num) -> void:
+	if num == 4:
+		$SceneItem.show()
+		$SceneItem2.show()
+		$SceneItem3.show()
+		$SceneItem4.show()
+		$SceneItem.char_index = 0
+		$SceneItem2.char_index = 1
+		$SceneItem3.char_index = 2
+		$SceneItem4.char_index = 3
+	elif num == 2:
+		$SceneItem.hide()
+		$SceneItem2.show()
+		$SceneItem3.show()
+		$SceneItem4.hide()
+		$SceneItem2.char_index = 0
+		$SceneItem3.char_index = 1
+	elif num == 0:
+		$SceneItem.hide()
+		$SceneItem2.hide()
+		$SceneItem3.hide()
+		$SceneItem4.hide()
 
 func checker() -> void:
 	if not frame_1_solved:
@@ -39,6 +63,8 @@ func checker() -> void:
 			frame_1_solved = true
 			$Frame.disable_monitoring()
 			$Frame2.enable_monitoring()
+			$Frame2.show_background()
+			update_items($Frame2.needed_items)
 			$Question1.queue_free()
 			$Label.text = frame_2_text
 			return
@@ -47,25 +73,29 @@ func checker() -> void:
 			print("Frame 2 solved!")
 			frame_2_solved = true
 			$Frame2.disable_monitoring()
-			#$Frame3.enable_monitoring()
+			$Frame3.enable_monitoring()
+			$Frame3.show_background()
+			update_items($Frame3.needed_items)
 			$Question2.queue_free()
 			$Label.text = frame_3_text
 			return
-	#if not frame_3_solved:
-		#if $Frame3.solved:
-			#print("Frame 3 solved!")
-			#frame_3_solved = true
-			#$Frame3.disable_monitoring()
-			#$Frame4.enable_monitoring()
-			#$Question3.queue_free()
-			#$Label.text = frame_4_text
-			#return
-	#if not frame_4_solved:
-		#if $Frame4.solved:
-			#print("Frame 4 solved!")
-			#frame_4_solved = true
-			#$Frame4.disable_monitoring()
-			#return
+	if not frame_3_solved:
+		if $Frame3.solved:
+			print("Frame 3 solved!")
+			frame_3_solved = true
+			$Frame3.disable_monitoring()
+			$Frame4.enable_monitoring()
+			$Frame4.show_background()
+			update_items($Frame4.needed_items)
+			$Question3.queue_free()
+			$Label.text = frame_4_text
+			return
+	if not frame_4_solved:
+		if $Frame4.solved:
+			print("Frame 4 solved!")
+			frame_4_solved = true
+			$Frame4.disable_monitoring()
+			return
 	life_lost()
 
 

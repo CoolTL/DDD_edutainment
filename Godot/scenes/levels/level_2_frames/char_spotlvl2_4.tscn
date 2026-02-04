@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3bnxn8h1llwa"]
+
+[ext_resource type="Script" uid="uid://dga64t00npnre" path="res://scenes/levels/level_2_frames/char_spotlvl2.gd" id="1_msbyv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhxem"]
+size = Vector2(33.1875, 18)
+
+[node name="char_spot" type="Area2D" groups=["spots"]]
+collision_layer = 2
+collision_mask = 2
+monitoring = false
+script = ExtResource("1_msbyv")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hhxem")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

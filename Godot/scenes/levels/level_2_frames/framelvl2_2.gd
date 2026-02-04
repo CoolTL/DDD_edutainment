@@ -3,6 +3,8 @@ extends Area2D
 
 var solved = false
 
+@export var needed_items = 2
+
 func hide_background() -> void:
 	$TextureRect.hide()
 
@@ -12,6 +14,10 @@ func enable_monitoring() -> void:
 func disable_monitoring() -> void:
 	self.monitoring = false
 	$TextureRect.disable_spots()
+	
+func show_background() -> void:
+	$TextureRect.show()
+	$TextureRect.enable_spots()
 
 func _on_area_exited(area: Area2D) -> void:
 	if area.get_parent().dragging == false:

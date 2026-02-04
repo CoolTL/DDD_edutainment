@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cw5ga8ij5krv"]
+[gd_scene load_steps=4 format=3 uid="uid://cnmehvux6v1e6"]
 
 [ext_resource type="Texture2D" uid="uid://ci4qvxtoag6kr" path="res://assets/ship_talk.png" id="1_ue6fr"]
 [ext_resource type="Script" uid="uid://5tmmov2gt3dy" path="res://scenes/levels/level_2_frames/texturelvl2.gd" id="2_dfdhx"]
