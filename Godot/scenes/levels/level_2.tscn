@@ -26,76 +26,51 @@ focus_mode = 0
 flat = true
 
 [node name="Frame" parent="." instance=ExtResource("3_ra442")]
-position = Vector2(24, 39)
+position = Vector2(81, 40)
 
 [node name="Frame2" parent="." instance=ExtResource("4_8qukl")]
-position = Vector2(142, 38)
+position = Vector2(203, 40)
 
 [node name="SceneItem" parent="." instance=ExtResource("4_ibugp")]
 position = Vector2(240, 202)
 
 [node name="SceneItem2" parent="." instance=ExtResource("4_ibugp")]
 position = Vector2(265, 202)
-back_index = 1
 item_frame = 1
 
 [node name="SceneItem3" parent="." instance=ExtResource("4_ibugp")]
 position = Vector2(291, 202)
 item_frame = 2
 
-[node name="Area2D" parent="SceneItem3" index="1"]
-collision_layer = 2
-collision_mask = 2
-
 [node name="SceneItem4" parent="." instance=ExtResource("4_ibugp")]
 position = Vector2(316, 202)
 char_index = 1
 item_frame = 3
 
-[node name="Area2D" parent="SceneItem4" index="1"]
-collision_layer = 2
-collision_mask = 2
-
 [node name="GameOver" parent="." instance=ExtResource("6_3p04p")]
 visible = false
 
 [node name="Question1" type="TextureRect" parent="."]
-offset_left = 143.0
+offset_left = 203.0
 offset_top = 38.0
-offset_right = 257.0
+offset_right = 317.0
 offset_bottom = 104.0
 texture = ExtResource("7_qsp8v")
 stretch_mode = 3
 
 [node name="Question2" type="TextureRect" parent="."]
-offset_left = 261.0
-offset_top = 36.0
-offset_right = 375.0
-offset_bottom = 102.0
+offset_left = 83.0
+offset_top = 108.0
+offset_right = 197.0
+offset_bottom = 174.0
 texture = ExtResource("7_qsp8v")
 stretch_mode = 3
 
 [node name="Question3" type="TextureRect" parent="."]
-offset_left = 25.0
-offset_top = 109.0
-offset_right = 139.0
-offset_bottom = 175.0
-texture = ExtResource("7_qsp8v")
-stretch_mode = 3
-
-[node name="Question4" type="TextureRect" parent="."]
-offset_left = 141.0
-offset_top = 110.0
-offset_right = 255.0
-offset_bottom = 176.0
-texture = ExtResource("7_qsp8v")
-stretch_mode = 3
-
-[node name="Question5" type="TextureRect" parent="."]
-offset_left = 262.0
-offset_top = 109.0
-offset_right = 376.0
-offset_bottom = 175.0
+offset_left = 203.0
+offset_top = 108.0
+offset_right = 317.0
+offset_bottom = 174.0
 texture = ExtResource("7_qsp8v")
 stretch_mode = 3
 
