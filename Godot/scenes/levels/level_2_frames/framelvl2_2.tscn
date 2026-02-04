@@ -1,18 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dp82u08lmt0vj"]
+[gd_scene load_steps=3 format=3 uid="uid://dp82u08lmt0vj"]
 
 [ext_resource type="Script" uid="uid://b37ksnx5t1pxx" path="res://scenes/levels/level_2_frames/framelvl2_2.gd" id="1_6v3f4"]
 [ext_resource type="PackedScene" uid="uid://berv5l3c0qrh6" path="res://scenes/levels/level_2_frames/texturelvl2_2.tscn" id="2_6v3f4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_law6f"]
-size = Vector2(116.5, 66.5)
-
 [node name="Frame" type="Area2D" groups=["frames"]]
 monitoring = false
 script = ExtResource("1_6v3f4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(57.75, 32.75)
-shape = SubResource("RectangleShape2D_law6f")
 
 [node name="TextureRect" parent="." instance=ExtResource("2_6v3f4")]
 visible = false

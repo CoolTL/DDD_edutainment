@@ -33,6 +33,17 @@ func _ready() -> void:
 	# NOTE Doesn't work yet
 	#checker()
 
+func item_animation(num) -> void:
+	num = str(num)
+	$SceneItem.animation = num
+	$SceneItem2.animation = num
+	$SceneItem3.animation = num
+	$SceneItem4.animation = num
+	$SceneItem.update_frame()
+	$SceneItem2.update_frame()
+	$SceneItem3.update_frame()
+	$SceneItem4.update_frame()
+
 func update_items(num) -> void:
 	if num == 4:
 		$SceneItem.show()

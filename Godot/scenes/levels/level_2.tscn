@@ -6,9 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://dp82u08lmt0vj" path="res://scenes/levels/level_2_frames/framelvl2_2.tscn" id="4_8qukl"]
 [ext_resource type="PackedScene" uid="uid://bls5gqavwlnd8" path="res://scenes/scene_item.tscn" id="4_ibugp"]
 [ext_resource type="PackedScene" uid="uid://bop04jj0xm507" path="res://scenes/heart.tscn" id="5_8qukl"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_2_frames/framelvl2_3.tscn" id="5_qsp8v"]
+[ext_resource type="PackedScene" uid="uid://bntd26g8vk3bq" path="res://scenes/levels/level_2_frames/framelvl2_3.tscn" id="5_qsp8v"]
 [ext_resource type="PackedScene" uid="uid://7g4tohppxvhc" path="res://scenes/game_over.tscn" id="6_3p04p"]
-[ext_resource type="PackedScene" path="res://scenes/levels/level_2_frames/framelvl2_4.tscn" id="6_nt80m"]
+[ext_resource type="PackedScene" uid="uid://0lguevpvvxxn" path="res://scenes/levels/level_2_frames/framelvl2_4.tscn" id="6_nt80m"]
 [ext_resource type="Texture2D" uid="uid://155n6lsnq26k" path="res://assets/question_mark.png" id="7_qsp8v"]
 
 [node name="Node" type="Node"]
@@ -41,17 +41,21 @@ position = Vector2(202, 109)
 
 [node name="SceneItem" parent="." instance=ExtResource("4_ibugp")]
 position = Vector2(240, 202)
+animation = &"3"
 
 [node name="SceneItem2" parent="." instance=ExtResource("4_ibugp")]
 position = Vector2(266, 202)
+animation = &"3"
 char_index = 1
 
 [node name="SceneItem3" parent="." instance=ExtResource("4_ibugp")]
 position = Vector2(292, 202)
+animation = &"3"
 char_index = 2
 
 [node name="SceneItem4" parent="." instance=ExtResource("4_ibugp")]
 position = Vector2(317, 202)
+animation = &"3"
 char_index = 3
 
 [node name="GameOver" parent="." instance=ExtResource("6_3p04p")]
