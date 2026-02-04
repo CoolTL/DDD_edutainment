@@ -47,25 +47,25 @@ func checker() -> void:
 			print("Frame 2 solved!")
 			frame_2_solved = true
 			$Frame2.disable_monitoring()
-			$Frame3.enable_monitoring()
+			#$Frame3.enable_monitoring()
 			$Question2.queue_free()
 			$Label.text = frame_3_text
 			return
-	if not frame_3_solved:
-		if $Frame3.solved:
-			print("Frame 3 solved!")
-			frame_3_solved = true
-			$Frame3.disable_monitoring()
-			$Frame4.enable_monitoring()
-			$Question3.queue_free()
-			$Label.text = frame_4_text
-			return
-	if not frame_4_solved:
-		if $Frame4.solved:
-			print("Frame 4 solved!")
-			frame_4_solved = true
-			$Frame4.disable_monitoring()
-			return
+	#if not frame_3_solved:
+		#if $Frame3.solved:
+			#print("Frame 3 solved!")
+			#frame_3_solved = true
+			#$Frame3.disable_monitoring()
+			#$Frame4.enable_monitoring()
+			#$Question3.queue_free()
+			#$Label.text = frame_4_text
+			#return
+	#if not frame_4_solved:
+		#if $Frame4.solved:
+			#print("Frame 4 solved!")
+			#frame_4_solved = true
+			#$Frame4.disable_monitoring()
+			#return
 	life_lost()
 
 
