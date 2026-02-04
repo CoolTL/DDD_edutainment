@@ -5,13 +5,14 @@ var of = Vector2(0,0)
 var start_pos = 0
 
 @export var char_index = 0
-@export var item_frame = 0
 
 func _ready():
 	#print(name, " layer=", $Area2D.collision_layer, " mask=", $Area2D.collision_mask)
-	self.frame = item_frame
+	self.frame = char_index
 	pass
 
+func update_frame() -> void:
+	self.frame = char_index
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:

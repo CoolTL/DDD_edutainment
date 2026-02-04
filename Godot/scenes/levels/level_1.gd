@@ -23,6 +23,7 @@ func _ready() -> void:
 	$Frame.enable_monitoring()
 	$Frame.show_background()
 	update_items($Frame.needed_items)
+	item_animation(1)
 	var counter = 0
 	for life in lives-1:
 		life = heart.instantiate()
@@ -35,6 +36,17 @@ func _ready() -> void:
 	# For testing purposes we check if we pre-set any frames to solved
 	# NOTE Doesn't work yet
 	#checker()
+
+func item_animation(num) -> void:
+	num = str(num)
+	$SceneItem.animation = num
+	$SceneItem2.animation = num
+	$SceneItem3.animation = num
+	$SceneItem4.animation = num
+	$SceneItem.update_frame()
+	$SceneItem2.update_frame()
+	$SceneItem3.update_frame()
+	$SceneItem4.update_frame()
 
 func update_items(num) -> void:
 	if num == 4:
@@ -79,6 +91,7 @@ func checker() -> void:
 			$Frame3.enable_monitoring()
 			$Frame3.show_background()
 			update_items($Frame3.needed_items)
+			item_animation(3)
 			$Question2.queue_free()
 			$Label.text = frame_3_text
 			return
@@ -90,6 +103,7 @@ func checker() -> void:
 			$Frame4.enable_monitoring()
 			$Frame4.show_background()
 			update_items($Frame4.needed_items)
+			item_animation(4)
 			$Question3.queue_free()
 			$Label.text = frame_4_text
 			return
@@ -101,6 +115,7 @@ func checker() -> void:
 			$Frame5.enable_monitoring()
 			$Frame5.show_background()
 			update_items($Frame5.needed_items)
+			item_animation(5)
 			$Question4.queue_free()
 			$Label.text = frame_5_text
 			return
@@ -112,6 +127,7 @@ func checker() -> void:
 			$Frame6.enable_monitoring()
 			$Frame6.show_background()
 			update_items($Frame6.needed_items)
+			item_animation(6)
 			$Question5.queue_free()
 			$Label.text = frame_6_text
 			return
