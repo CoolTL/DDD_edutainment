@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ckqrywgrw10ny"]
 
 [ext_resource type="Texture2D" uid="uid://bmc5tbf1ysipj" path="res://assets/parliament.png" id="1_xwtce"]
-[ext_resource type="Script" uid="uid://cc7ontq2ep1uk" path="res://scenes/levels/level_1_frames/texture_6.gd" id="2_xwtce"]
+[ext_resource type="Script" path="res://scenes/levels/level_1_frames/texture_6.gd" id="2_xwtce"]
 [ext_resource type="PackedScene" uid="uid://iuy0s0i8xim2" path="res://scenes/lvl6_spot.tscn" id="3_2r0dw"]
 
 [node name="TextureRect" type="TextureRect"]
@@ -20,23 +20,23 @@ position = Vector2(3, 0)
 [node name="Yes" type="Label" parent="char_spot"]
 visible = false
 offset_left = -10.0
-offset_top = -7.0
+offset_top = -9.0
 offset_right = 15.0
-offset_bottom = 7.0
+offset_bottom = 5.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
-text = "Yes"
+text = "Ja"
 horizontal_alignment = 1
 
 [node name="No" type="Label" parent="char_spot"]
 visible = false
 offset_left = -10.0
-offset_top = -7.0
+offset_top = -8.0
 offset_right = 15.0
-offset_bottom = 7.0
+offset_bottom = 6.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
-text = "No"
+text = "Nej"
 horizontal_alignment = 1
 
 [editable path="char_spot"]

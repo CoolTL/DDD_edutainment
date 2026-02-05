@@ -16,7 +16,7 @@
 [node name="Level1" type="Node"]
 script = ExtResource("1_x42e6")
 frame_1_text = "Tyske tropper kommer fra grænsen mellem tyskland og danmark tidlig morgen den _____ 1940. Svare ved at trække en date fra item boksen over til tegneserie panellet."
-frame_2_text = "De tyske tropper ankommer til Danmark, hvor tager de hen?"
+frame_2_text = "De tyske tropper ankommer til Danmark, hvor tager de hen? (Tryk på kortet)"
 frame_3_text = "Tegn to tyske diplomater med to dokumenter!"
 frame_4_text = "Tyske folk giver dokument til dansk diplomat P. _____?"
 frame_5_text = "Tyskerne insisterer på at deres krav bliver sat i spil. Hvordan reagerer P. Munch?"
@@ -91,17 +91,21 @@ stretch_mode = 3
 
 [node name="SceneItem" parent="." instance=ExtResource("3_6761a")]
 position = Vector2(240, 202)
+animation = &"1"
 
 [node name="SceneItem2" parent="." instance=ExtResource("3_6761a")]
 position = Vector2(265, 202)
+animation = &"1"
 char_index = 1
 
 [node name="SceneItem3" parent="." instance=ExtResource("3_6761a")]
 position = Vector2(291, 202)
+animation = &"1"
 char_index = 2
 
 [node name="SceneItem4" parent="." instance=ExtResource("3_6761a")]
 position = Vector2(316, 202)
+animation = &"1"
 char_index = 3
 
 [node name="CheckButton" type="Button" parent="."]

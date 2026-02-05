@@ -3,45 +3,24 @@
 [ext_resource type="Script" uid="uid://bsns6fy2hsldx" path="res://scenes/char_spot.gd" id="1_bl8yf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hhxem"]
-size = Vector2(33.1875, 16.25)
+size = Vector2(114, 64)
 
 [node name="char_spot" type="Area2D" groups=["spots"]]
 collision_layer = 2
 collision_mask = 2
 monitoring = false
 script = ExtResource("1_bl8yf")
+correct_text = "9. April 1940"
 metadata/_edit_group_ = true
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.5
-offset_top = -19.0
-offset_right = 9.5
-offset_bottom = 19.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0.09411765, 0.09411765, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hhxem")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.5
-offset_top = -19.0
-offset_right = 9.5
-offset_bottom = 19.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 12
+text = "X. ___ 1940"
+horizontal_alignment = 2
 
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

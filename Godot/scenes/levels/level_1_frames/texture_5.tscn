@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bitnnjcgkshvj"]
 
 [ext_resource type="Texture2D" uid="uid://csag7kk5o4rcl" path="res://assets/krav_til_danmark.png" id="1_h2apl"]
-[ext_resource type="Script" uid="uid://1fiqsi136aod" path="res://scenes/levels/level_1_frames/texture_5.gd" id="2_h2apl"]
+[ext_resource type="Script" path="res://scenes/levels/level_1_frames/texture_5.gd" id="2_h2apl"]
 [ext_resource type="PackedScene" uid="uid://b4mb2diq3evph" path="res://scenes/char_spot_5.tscn" id="3_eiy6l"]
 
 [node name="TextureRect" type="TextureRect"]
@@ -13,6 +13,8 @@ script = ExtResource("2_h2apl")
 
 [node name="char_spot" parent="." instance=ExtResource("3_eiy6l")]
 position = Vector2(17, 43)
+correct_message = ":)"
+wrong_message = ":("
 
 [node name="CollisionShape2D" parent="char_spot" index="0"]
 position = Vector2(-1.5, 0)
