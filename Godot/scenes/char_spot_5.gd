@@ -22,10 +22,10 @@ func _on_area_exited(area: Area2D) -> void:
 	if area.get_parent().dragging == false:
 		if area.get_parent().char_index == 0:
 			clear_spot()
-			$Label.text = correct_message
+			$Label.text = wrong_message
 		elif area.get_parent().char_index == 1:
 			clear_spot()
-			$Label.text = wrong_message
+			$Label.text = correct_message
 		else:
 			clear_spot()
 		changed.emit()

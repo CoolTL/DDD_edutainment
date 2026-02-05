@@ -20,8 +20,6 @@ var heart = preload("res://scenes/heart.tscn")
 @onready var hearts = [$Heart]
 
 func _ready() -> void:
-	$Frame.enable_monitoring()
-	$Frame.show_background()
 	update_items($Frame.needed_items)
 	item_animation(1)
 	var counter = 0
@@ -36,6 +34,11 @@ func _ready() -> void:
 	# For testing purposes we check if we pre-set any frames to solved
 	# NOTE Doesn't work yet
 	#checker()
+
+func start() -> void:
+	$Question0.queue_free()
+	$Frame.enable_monitoring()
+	$Frame.show_background()
 
 func item_animation(num) -> void:
 	num = str(num)

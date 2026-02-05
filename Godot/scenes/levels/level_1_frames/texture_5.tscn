@@ -13,8 +13,8 @@ script = ExtResource("2_h2apl")
 
 [node name="char_spot" parent="." instance=ExtResource("3_eiy6l")]
 position = Vector2(17, 43)
-correct_message = ":)"
-wrong_message = ":("
+correct_message = ":("
+wrong_message = ":)"
 
 [node name="CollisionShape2D" parent="char_spot" index="0"]
 position = Vector2(-1.5, 0)

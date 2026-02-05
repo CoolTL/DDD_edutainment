@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://desploocsv0ov"]
+[gd_scene load_steps=14 format=3 uid="uid://desploocsv0ov"]
 
 [ext_resource type="Script" uid="uid://bws71e0ixuj0w" path="res://scenes/levels/level_1.gd" id="1_x42e6"]
 [ext_resource type="Texture2D" uid="uid://yogmbemltanl" path="res://assets/level1_baggrund.png" id="2_sk5k4"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cmvalugpg4phn" path="res://scenes/levels/level_1_frames/frame_6.tscn" id="8_s8va5"]
 [ext_resource type="PackedScene" uid="uid://7g4tohppxvhc" path="res://scenes/game_over.tscn" id="9_dga24"]
 [ext_resource type="PackedScene" uid="uid://bx2ufntudms67" path="res://scenes/levels/level_1_frames/frame_5.tscn" id="11_excbq"]
+[ext_resource type="PackedScene" uid="uid://dsgti7qdu5pan" path="res://scenes/tutorial_rect.tscn" id="13_dnkej"]
 
 [node name="Level1" type="Node"]
 script = ExtResource("1_x42e6")
@@ -48,6 +49,14 @@ position = Vector2(143, 110)
 
 [node name="Frame6" parent="." instance=ExtResource("8_s8va5")]
 position = Vector2(262, 110)
+
+[node name="Question0" type="TextureRect" parent="."]
+offset_left = 24.0
+offset_top = 38.0
+offset_right = 138.0
+offset_bottom = 104.0
+texture = ExtResource("7_oc4kc")
+stretch_mode = 3
 
 [node name="Question1" type="TextureRect" parent="."]
 offset_left = 143.0
@@ -133,4 +142,7 @@ clip_text = true
 [node name="GameOver" parent="." instance=ExtResource("9_dga24")]
 visible = false
 
+[node name="TutorialRect" parent="." instance=ExtResource("13_dnkej")]
+
 [connection signal="pressed" from="CheckButton" to="." method="_on_check_button_pressed"]
+[connection signal="tree_exited" from="TutorialRect" to="." method="start"]
