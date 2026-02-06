@@ -28,7 +28,7 @@ focus_mode = 0
 flat = true
 
 [node name="Frame" parent="." instance=ExtResource("3_ra442")]
-position = Vector2(81, 40)
+position = Vector2(83, 40)
 
 [node name="Frame2" parent="." instance=ExtResource("4_8qukl")]
 position = Vector2(203, 40)
@@ -38,25 +38,6 @@ position = Vector2(83, 108)
 
 [node name="Frame4" parent="." instance=ExtResource("6_nt80m")]
 position = Vector2(202, 109)
-
-[node name="SceneItem" parent="." instance=ExtResource("4_ibugp")]
-position = Vector2(240, 202)
-animation = &"3"
-
-[node name="SceneItem2" parent="." instance=ExtResource("4_ibugp")]
-position = Vector2(266, 202)
-animation = &"3"
-char_index = 1
-
-[node name="SceneItem3" parent="." instance=ExtResource("4_ibugp")]
-position = Vector2(292, 202)
-animation = &"3"
-char_index = 2
-
-[node name="SceneItem4" parent="." instance=ExtResource("4_ibugp")]
-position = Vector2(317, 202)
-animation = &"3"
-char_index = 3
 
 [node name="GameOver" parent="." instance=ExtResource("6_3p04p")]
 visible = false
@@ -85,6 +66,25 @@ offset_bottom = 174.0
 texture = ExtResource("7_qsp8v")
 stretch_mode = 3
 
+[node name="SceneItem" parent="." instance=ExtResource("4_ibugp")]
+position = Vector2(240, 202)
+animation = &"3"
+
+[node name="SceneItem2" parent="." instance=ExtResource("4_ibugp")]
+position = Vector2(266, 202)
+animation = &"3"
+char_index = 1
+
+[node name="SceneItem3" parent="." instance=ExtResource("4_ibugp")]
+position = Vector2(292, 202)
+animation = &"3"
+char_index = 2
+
+[node name="SceneItem4" parent="." instance=ExtResource("4_ibugp")]
+position = Vector2(317, 202)
+animation = &"3"
+char_index = 3
+
 [node name="Label" type="Label" parent="."]
 offset_left = 9.0
 offset_top = 185.0
@@ -97,6 +97,6 @@ autowrap_mode = 3
 clip_text = true
 
 [node name="Heart" parent="." instance=ExtResource("5_8qukl")]
-position = Vector2(287, 20)
+position = Vector2(310, 20)
 
 [connection signal="pressed" from="Check" to="." method="_on_check_pressed"]

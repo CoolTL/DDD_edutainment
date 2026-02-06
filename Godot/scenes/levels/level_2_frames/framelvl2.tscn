@@ -9,6 +9,5 @@ script = ExtResource("1_h0722")
 [node name="TextureRect" parent="." instance=ExtResource("2_h0722")]
 visible = false
 
-[connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="correct" from="TextureRect" to="." method="_on_texture_rect_correct"]
 [connection signal="not_correct" from="TextureRect" to="." method="_on_texture_rect_not_correct"]
