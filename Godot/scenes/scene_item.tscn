@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bls5gqavwlnd8"]
+[gd_scene load_steps=26 format=3 uid="uid://bls5gqavwlnd8"]
 
 [ext_resource type="Texture2D" uid="uid://cb178olso7kv1" path="res://assets/5maj_item.png" id="1_6prdc"]
 [ext_resource type="Texture2D" uid="uid://beigi2dcchv72" path="res://assets/person1_item.png" id="1_8txdi"]
@@ -11,7 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://carvv02huuq53" path="res://assets/9maj_item.png" id="4_w1gd6"]
 [ext_resource type="Texture2D" uid="uid://b8ivy4245ua2m" path="res://assets/22aug_item.png" id="5_wpqit"]
 [ext_resource type="Texture2D" uid="uid://dyyq480e01ubo" path="res://assets/29aug_item.png" id="6_w1gd6"]
+[ext_resource type="Texture2D" uid="uid://c4c1wo3cfiqvt" path="res://assets/25_item.png" id="7_1m23s"]
+[ext_resource type="Texture2D" uid="uid://c404po8th6nma" path="res://assets/28_item.png" id="8_5ia3g"]
 [ext_resource type="Texture2D" uid="uid://dlit2p5gmbpa6" path="res://assets/borch_item.png" id="9_e8ew6"]
+[ext_resource type="Texture2D" uid="uid://bcdw5u8onhf1t" path="res://assets/32_item.png" id="9_nkbhx"]
+[ext_resource type="Texture2D" uid="uid://d5aplkrgwdf" path="res://assets/36_item.png" id="10_6vqpc"]
 [ext_resource type="Texture2D" uid="uid://cqrcthpoujeip" path="res://assets/munch_item.png" id="10_rvjbc"]
 [ext_resource type="Texture2D" uid="uid://b6jikdt50vf2b" path="res://assets/hitler_item.png" id="11_1m23s"]
 [ext_resource type="Texture2D" uid="uid://mh5kn1xwtk4w" path="res://assets/lunch_item.png" id="12_5ia3g"]
@@ -64,6 +68,23 @@ animations = [{
 }],
 "loop": true,
 "name": &"23",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_1m23s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5ia3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nkbhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6vqpc")
+}],
+"loop": true,
+"name": &"24",
 "speed": 5.0
 }, {
 "frames": [{
@@ -128,7 +149,7 @@ size = Vector2(22, 26)
 
 [node name="SceneItem" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_yiifg")
-animation = &"23"
+animation = &"24"
 script = ExtResource("2_4jft0")
 metadata/_edit_group_ = true
 

@@ -1,32 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmuukjhrglaww"]
+[gd_scene load_steps=4 format=3 uid="uid://bkfqel5echi78"]
 
-[ext_resource type="Texture2D" uid="uid://ci4qvxtoag6kr" path="res://assets/ship_talk.png" id="1_ue6fr"]
+[ext_resource type="Texture2D" uid="uid://mkqcu44elox3" path="res://assets/sweden_boat.png" id="1_bjghp"]
 [ext_resource type="Script" uid="uid://5tmmov2gt3dy" path="res://scenes/levels/level_2_frames/texturelvl2.gd" id="2_dfdhx"]
-[ext_resource type="PackedScene" uid="uid://bherdjkme1adr" path="res://scenes/levels/level_2_frames/char_spotlvl2.tscn" id="3_hpxa7"]
+[ext_resource type="PackedScene" uid="uid://crejk5dfl5uxt" path="res://scenes/levels/level_2_frames/char_spotlvl2_4.tscn" id="3_bjghp"]
 
 [node name="TextureRect" type="TextureRect"]
 offset_right = 114.0
 offset_bottom = 64.0
-texture = ExtResource("1_ue6fr")
+texture = ExtResource("1_bjghp")
 expand_mode = 1
 script = ExtResource("2_dfdhx")
 
-[node name="char_spot" parent="." instance=ExtResource("3_hpxa7")]
-position = Vector2(56, 48)
-correct_msg = "yes"
-wrong_msg = "no"
+[node name="char_spot" parent="." instance=ExtResource("3_bjghp")]
+position = Vector2(51, 0)
+correct_msg = "32 skibe sunket"
 
 [node name="CollisionShape2D" parent="char_spot" index="0"]
-position = Vector2(3, 0)
+position = Vector2(23.203125, 14.5)
 
 [node name="Label" parent="char_spot" index="1"]
-offset_left = -12.0
-offset_top = -9.0
-offset_right = 15.0
-offset_bottom = 9.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 8
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = -13.0
+offset_right = 61.0
 
 [editable path="char_spot"]

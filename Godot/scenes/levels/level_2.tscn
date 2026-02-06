@@ -40,7 +40,7 @@ position = Vector2(83, 110)
 needed_items = 4
 
 [node name="Frame4" parent="." instance=ExtResource("6_nt80m")]
-position = Vector2(202, 109)
+position = Vector2(203, 110)
 needed_items = 4
 
 [node name="Question1" type="TextureRect" parent="."]

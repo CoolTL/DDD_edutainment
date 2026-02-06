@@ -1,15 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3bnxn8h1llwa"]
+[gd_scene load_steps=3 format=3 uid="uid://crejk5dfl5uxt"]
 
-[ext_resource type="Script" uid="uid://dga64t00npnre" path="res://scenes/levels/level_2_frames/char_spotlvl2.gd" id="1_msbyv"]
+[ext_resource type="Script" uid="uid://by3lvbju1p0sy" path="res://scenes/levels/level_2_frames/char_spotlvl2_4.gd" id="1_pk2fs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hhxem"]
-size = Vector2(33.1875, 18)
+size = Vector2(79.59375, 27)
 
 [node name="char_spot" type="Area2D" groups=["spots"]]
 collision_layer = 2
 collision_mask = 2
 monitoring = false
-script = ExtResource("1_msbyv")
+script = ExtResource("1_pk2fs")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -18,5 +18,8 @@ shape = SubResource("RectangleShape2D_hhxem")
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_font_sizes/font_size = 8
+text = "XX skibe sunket"
+horizontal_alignment = 2
 
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
