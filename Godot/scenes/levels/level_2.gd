@@ -87,6 +87,7 @@ func checker() -> void:
 			$Frame3.enable_monitoring()
 			$Frame3.show_background()
 			update_items($Frame3.needed_items)
+			item_animation(23)
 			$Question2.queue_free()
 			$Label.text = frame_3_text
 			return
@@ -98,6 +99,7 @@ func checker() -> void:
 			$Frame4.enable_monitoring()
 			$Frame4.show_background()
 			update_items($Frame4.needed_items)
+			item_animation(24)
 			$Question3.queue_free()
 			$Label.text = frame_4_text
 			return
