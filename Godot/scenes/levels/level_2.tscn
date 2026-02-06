@@ -13,6 +13,8 @@
 
 [node name="Node" type="Node"]
 script = ExtResource("1_g2h2n")
+frame_3_text = "Fladen er sunket på homen på den XX. ____ 1943."
+frame_4_text = "Hvor mange skibe synker i sverige?"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -34,13 +36,12 @@ position = Vector2(83, 40)
 position = Vector2(203, 40)
 
 [node name="Frame3" parent="." instance=ExtResource("5_qsp8v")]
-position = Vector2(83, 108)
+position = Vector2(83, 110)
+needed_items = 4
 
 [node name="Frame4" parent="." instance=ExtResource("6_nt80m")]
 position = Vector2(202, 109)
-
-[node name="GameOver" parent="." instance=ExtResource("6_3p04p")]
-visible = false
+needed_items = 4
 
 [node name="Question1" type="TextureRect" parent="."]
 offset_left = 203.0
@@ -84,6 +85,9 @@ char_index = 2
 position = Vector2(317, 202)
 animation = &"3"
 char_index = 3
+
+[node name="GameOver" parent="." instance=ExtResource("6_3p04p")]
+visible = false
 
 [node name="Label" type="Label" parent="."]
 offset_left = 9.0

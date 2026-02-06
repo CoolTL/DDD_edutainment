@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dayk5jx5sx0d5" path="res://scenes/levels/level_2_frames/framelvl2.gd" id="1_h0722"]
 [ext_resource type="PackedScene" uid="uid://cw5ga8ij5krv" path="res://scenes/levels/level_2_frames/texturelvl2.tscn" id="2_h0722"]
 
-[node name="Frame" type="Area2D" groups=["frames"]]
+[node name="Frame" type="Area2D"]
 script = ExtResource("1_h0722")
 
 [node name="TextureRect" parent="." instance=ExtResource("2_h0722")]
